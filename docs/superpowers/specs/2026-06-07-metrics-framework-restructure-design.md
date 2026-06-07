@@ -336,6 +336,49 @@ One metric = one PR. Registry and chain file are updated in the same PR — neve
 
 ---
 
+## Skills
+
+### `retrieve-metrics`
+
+**Purpose:** A Claude Code skill that abstracts all metric retrieval from the registry. Agents invoke it with semantic inputs — never with file paths or raw YAML parsing.
+
+**Location:** `framework/interfaces/skills/retrieve-metrics.md`
+
+**Semantic interface — inputs:**
+
+| Parameter | Description | Example |
+|---|---|---|
+| `chain` | Filter by value lever | `chain=cost-savings` |
+| `type` | Filter by metric type | `type=BODM` |
+| `name` | Lookup by canonical name | `name="Fault Detection Rate"` |
+
+Parameters can be combined. At least one is required.
+
+**Example invocations:**
+```
+retrieve-metrics  chain=cost-savings  type=BODM
+retrieve-metrics  name="Fault Detection Rate"
+retrieve-metrics  type=TODM
+retrieve-metrics  chain=esg-sustainability
+```
+
+**Output:** A filtered list of metrics, each with:
+- `id` — stable identifier
+- `canonical_name` — the exact name to use in case studies and mappings
+- `type` — PVL / ABO / BODM / TODM
+- `chains` — which value levers this metric belongs to
+- `target` — benchmark target
+- `framework_version` — version of the registry at fetch time
+
+**MCP migration path:** The semantic interface (inputs and output shape) is the stable contract. When the project is ready for MCP, the skill implementation is replaced by an MCP tool call with identical inputs and outputs. Any agent calling `retrieve-metrics` requires no changes — only the skill file itself is updated.
+
+**What the skill does internally (implementation, not interface):**
+1. Fetches `metrics-registry.yaml` from the stable GitHub URL
+2. Filters by the provided parameters
+3. Returns the matching subset in a consistent structured format
+
+---
+
 ## What Does Not Change
 
 - `examples/` — unchanged
