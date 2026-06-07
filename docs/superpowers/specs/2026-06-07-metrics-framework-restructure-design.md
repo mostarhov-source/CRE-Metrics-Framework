@@ -244,14 +244,95 @@ Instructs the LLM to: load the relevant chain file → traverse from PVL down to
 
 ---
 
-## Contribution Guide (Summary)
+## Governance & Change Mechanics
 
-When adding a new metric:
+All changes to the framework fall into four types. Each type has defined files to touch, a versioning rule, and a consumer impact assessment.
+
+### Type 1 — Add a New Metric
+
+**Who:** Author or community (via PR)
+**Files touched (always exactly 3):**
+1. `metrics/{type}/{metric-id}.md` — create using the standard template
+2. `interfaces/machine-readable/metrics-registry.yaml` — add entry, bump minor version (e.g. 1.1 → 1.2)
+3. `chains/{chain-id}.md` — add row to the relevant chain table
+
+**Consumer impact:** None. Adding to the registry is non-breaking. Consumers pick up new metrics automatically on their next registry fetch.
+
+---
+
+### Type 2 — Edit a Metric's Definition, Formula, or Targets
+
+**Who:** Author or community (via PR)
+**Files touched:**
+1. `metrics/{type}/{metric-id}.md` — update the body content
+2. `interfaces/machine-readable/metrics-registry.yaml` — update `last_updated` field only; no version bump
+
+**Consumer impact:** None. Consumers only read `id`, `name`, `type`, and `chains` from the registry. Internal metric content is not consumed programmatically.
+
+---
+
+### Type 3 — Rename a Metric (Canonical Name Change)
+
+**Who:** Author only
+**Files touched:**
+1. `metrics/{type}/{metric-id}.md` — update `name` in YAML frontmatter
+2. `interfaces/machine-readable/metrics-registry.yaml` — update `name` + `canonical_name`, add `deprecated_name`, bump **major** version (e.g. 1.x → 2.0)
+3. All `chains/` files referencing the old name
+
+**Deprecation rule:** The old name must be preserved in the registry for one full major version under a `deprecated_name` field before removal:
+```yaml
+- id: energy-savings-pct
+  name: Energy Savings %
+  canonical_name: "Energy Savings %"
+  deprecated_name: "Energy Savings Percentage"   # removed in next major version
+```
+
+**Consumer impact: Breaking.** Consumers using the old canonical name (e.g. case study entries in CRE-AI-Intelligence) will be flagged at next registry fetch. Human review required before applying fixes.
+
+**Required:** CHANGELOG entry with old name → new name and rationale.
+
+---
+
+### Type 4 — Change the Hierarchy (Add/Remove PVL or ABO, or Move Metric Between Chains)
+
+**Who:** Author only — not open to community PRs
+**Files touched:**
+1. All `metrics/` files in the affected chain(s) — update `chains:` frontmatter
+2. Affected `chains/` files — update tables
+3. `interfaces/machine-readable/chains-map.yaml` — full hierarchy update
+4. `interfaces/machine-readable/metrics-registry.yaml` — update `chains` field per affected metric, bump **major** version
+
+**Consumer impact: Breaking.** Chain membership is consumed by agents doing value chain traversal and by case study mapping (the `### Framework Mapping` block). Existing case studies may need remapping after a hierarchy change.
+
+**Required:** CHANGELOG entry with rationale. Because this is author-only, no PR review gate is needed — but the CHANGELOG is mandatory.
+
+---
+
+### Versioning Rules
+
+| Change Type | Registry Version Bump | Breaking for Consumers |
+|---|---|---|
+| Add new metric | Minor (1.1 → 1.2) | No |
+| Edit definition / formula / target | `last_updated` only | No |
+| Rename metric | Major (1.x → 2.0) | Yes |
+| Move metric between chains | Major (1.x → 2.0) | Yes |
+| Add new PVL or ABO | Major (1.x → 2.0) | Yes |
+
+---
+
+### Contribution Guide
+
+**Community contributors (any metric addition or definition edit):**
 1. Create `metrics/{type}/{metric-id}.md` using the standard template
 2. Add the metric to `interfaces/machine-readable/metrics-registry.yaml`
 3. Add the metric to the relevant `chains/{chain-id}.md` file
 
-One metric = one PR. Chain files and registry are updated in the same PR — never separately.
+One metric = one PR. Registry and chain file are updated in the same PR — never separately. PRs that touch only 1 of the 3 required files will not be merged.
+
+**Author-only changes (renames, hierarchy changes):**
+- Commit directly to `main` with a CHANGELOG entry
+- Bump the major version in the registry
+- If renaming: preserve `deprecated_name` for one version cycle
 
 ---
 
