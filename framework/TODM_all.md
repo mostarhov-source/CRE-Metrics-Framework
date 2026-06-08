@@ -1,3 +1,7 @@
+> **⚠️ DEPRECATED (v2.0 transition):** This file is kept for reference during migration. The canonical source is now the individual metric files in [`metrics/todm/`](metrics/todm/). The stable registry is at [`interfaces/machine-readable/metrics-registry.yaml`](interfaces/machine-readable/metrics-registry.yaml). This file will be removed in v2.0.
+
+---
+
 # 📑 Technology-Outcome Driven Metrics (TODMs)
 
 This file defines Technology-Outcome Driven Metrics (TODMs) for Industrial & Logistics Commercial Real Estate (I&L CRE).  

@@ -1,3 +1,7 @@
+> **⚠️ DEPRECATED (v2.0 transition):** This file is kept for reference during migration. The canonical source is now the individual metric files in [`metrics/pvl/`](metrics/pvl/) and the chain files in [`chains/`](chains/). This file will be removed in v2.0.
+
+---
+
 # 📘 Primary Value Levers (PVLs)
 
 This file defines Primary Value Levers (PVLs) for Industrial & Logistics Commercial Real Estate (I&L CRE).  

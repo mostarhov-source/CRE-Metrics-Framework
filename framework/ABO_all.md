@@ -1,3 +1,7 @@
+> **⚠️ DEPRECATED (v2.0 transition):** This file is kept for reference during migration. The canonical source is now the individual metric files in [`metrics/abo/`](metrics/abo/) and the chain files in [`chains/`](chains/). This file will be removed in v2.0.
+
+---
+
 # 📘 Aggregated Business Outcomes (ABOs)
 
 This file defines Aggregated Business Outcomes (ABOs) for Industrial & Logistics Commercial Real Estate (I&L CRE).  

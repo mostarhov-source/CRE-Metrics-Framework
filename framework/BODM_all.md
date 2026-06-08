@@ -1,4 +1,8 @@
-    # 📑 Business Outcome–Driven Metrics (BODMs)
+> **⚠️ DEPRECATED (v2.0 transition):** This file is kept for reference during migration. The canonical source is now the individual metric files in [`metrics/bodm/`](metrics/bodm/). The stable registry is at [`interfaces/machine-readable/metrics-registry.yaml`](interfaces/machine-readable/metrics-registry.yaml). This file will be removed in v2.0.
+
+---
+
+# 📑 Business Outcome–Driven Metrics (BODMs)
 
 This file contains a structured knowledge base of Business Outcome–Driven Metrics (BODMs) for Industrial & Logistics Commercial Real Estate (I&L CRE).  
 Each metric includes definition, importance, formula, data sources, and example targets/benchmarks.
