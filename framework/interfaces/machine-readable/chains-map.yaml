@@ -1,0 +1,130 @@
+version: "1.0"
+last_updated: "2026-06-07"
+description: "Explicit PVL → ABO → BODM → TODM hierarchy for all value chains."
+
+chains:
+
+  - id: cost-savings
+    name: Cost Savings
+    pvl: cost-savings
+    abo:
+      - operational-efficiency-sustainability
+    bodm:
+      - noi
+      - fault-detection-rate
+      - kwh-m2-reduction
+      - peak-demand-reduction
+      - construction-rework-reduction
+    todm:
+      - energy-savings-pct
+      - iot-sensor-health-data-quality
+      - proptech-investment-roi
+
+  - id: revenue-growth
+    name: Revenue Growth
+    pvl: revenue-growth
+    abo:
+      - optimised-portfolio-returns
+      - tenant-satisfaction-retention
+    bodm:
+      - irr
+      - npv
+      - equity-multiple
+      - noi
+      - wacc
+      - tenant-retention-rate
+      - tenant-payment-reliability-index
+      - average-daily-rate
+      - market-rent-vs-contract-rent
+      - market-absorption-rate
+      - development-density-design-index
+      - gdv-optimisation
+      - time-to-feasibility-study
+      - development-pipeline-velocity
+      - tenant-utilization-rate
+    todm:
+      - financial-model-accuracy
+      - automated-sell-hold-frequency
+      - ai-cost-estimate-accuracy
+      - ai-development-options-per-assessment
+      - proptech-investment-roi
+      - tenant-experience-tech-utilization
+
+  - id: risk-reduction
+    name: Risk Reduction
+    pvl: risk-reduction
+    abo:
+      - reduced-risk-compliance
+      - tenant-satisfaction-retention
+    bodm:
+      - irr
+      - ltv
+      - debt-yield
+      - fault-detection-rate
+      - lease-data-integrity
+      - tenant-payment-reliability-index
+      - planning-policy-compliance-rate
+      - climate-risk-exposure
+      - accident-rate-reduction
+      - architects-plans-compliance
+      - bodm-cybersecurity-incident-rate
+    todm:
+      - system-uptime-availability
+      - discrepancy-detection-rate
+      - todm-lease-data-integrity
+      - iot-sensor-health-data-quality
+      - todm-cybersecurity-incident-rate
+
+  - id: esg-sustainability
+    name: ESG & Sustainability
+    pvl: esg-sustainability
+    abo:
+      - operational-efficiency-sustainability
+    bodm:
+      - kwh-m2-reduction
+      - peak-demand-reduction
+      - carbon-emissions-reduction
+      - waste-reduction
+      - green-lease-compliance-automation
+      - climate-risk-exposure
+      - embodied-carbon-intensity
+      - construction-waste-reduction
+    todm:
+      - energy-savings-pct
+      - todm-green-lease-compliance-automation
+      - digital-twin-fidelity
+
+  - id: productivity-workflow
+    name: Productivity & Workflow Efficiency
+    pvl: productivity-workflow
+    abo:
+      - streamlined-decision-making
+    bodm:
+      - financial-dashboard-automation
+      - report-generation-time-reduction
+      - property-data-integration-rate
+      - asset-hierarchy-data-coverage
+      - vacancy-data-accuracy
+      - lease-data-integrity
+      - rent-review-automation-rate
+      - tenant-record-duplication-rate
+      - lease-event-processing-time-reduction
+      - time-to-feasibility-study
+      - development-pipeline-velocity
+      - tenant-utilization-rate
+    todm:
+      - data-capture-automation-rate
+      - todm-financial-dashboard-automation
+      - todm-report-generation-time-reduction
+      - todm-asset-hierarchy-data-coverage
+      - todm-property-data-integration-rate
+      - todm-vacancy-data-accuracy
+      - todm-rent-review-automation-rate
+      - todm-lease-event-processing-time-reduction
+      - todm-tenant-record-duplication-rate
+      - todm-lease-data-integrity
+      - data-model-alignment-accuracy
+      - technology-adoption-rate
+      - digital-twin-fidelity
+      - system-uptime-availability
+      - ai-development-options-per-assessment

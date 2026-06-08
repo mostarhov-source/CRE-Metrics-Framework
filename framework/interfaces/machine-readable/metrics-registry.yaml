@@ -1,0 +1,736 @@
+version: "1.0"
+last_updated: "2026-06-07"
+description: "Canonical registry of all CRE Metrics Framework metrics. This is the only file external consumers need to reference."
+stable_url: "https://raw.githubusercontent.com/mostarhov-source/CRE-Metrics-Framework/main/framework/interfaces/machine-readable/metrics-registry.yaml"
+
+metrics:
+
+  # ─────────────────────────────────────────────
+  # PVL — Primary Value Levers (5)
+  # ─────────────────────────────────────────────
+
+  - id: cost-savings
+    name: Cost Savings
+    canonical_name: "Cost Savings"
+    type: PVL
+    category: Primary Value Lever
+    chains:
+      - cost-savings
+
+  - id: revenue-growth
+    name: Revenue Growth
+    canonical_name: "Revenue Growth"
+    type: PVL
+    category: Primary Value Lever
+    chains:
+      - revenue-growth
+
+  - id: risk-reduction
+    name: Risk Reduction
+    canonical_name: "Risk Reduction"
+    type: PVL
+    category: Primary Value Lever
+    chains:
+      - risk-reduction
+
+  - id: esg-sustainability
+    name: ESG & Sustainability
+    canonical_name: "ESG & Sustainability"
+    type: PVL
+    category: Primary Value Lever
+    chains:
+      - esg-sustainability
+
+  - id: productivity-workflow
+    name: Productivity & Workflow Efficiency
+    canonical_name: "Productivity & Workflow Efficiency"
+    type: PVL
+    category: Primary Value Lever
+    chains:
+      - productivity-workflow
+
+  # ─────────────────────────────────────────────
+  # ABO — Aggregated Business Outcomes (5)
+  # ─────────────────────────────────────────────
+
+  - id: optimised-portfolio-returns
+    name: Optimised Portfolio Returns
+    canonical_name: "Optimised Portfolio Returns"
+    type: ABO
+    category: Aggregated Business Outcome
+    chains:
+      - revenue-growth
+
+  - id: operational-efficiency-sustainability
+    name: Enhanced Operational Efficiency & Sustainability
+    canonical_name: "Enhanced Operational Efficiency & Sustainability"
+    type: ABO
+    category: Aggregated Business Outcome
+    chains:
+      - cost-savings
+      - esg-sustainability
+
+  - id: reduced-risk-compliance
+    name: Reduced Investment Risk & Improved Compliance
+    canonical_name: "Reduced Investment Risk & Improved Compliance"
+    type: ABO
+    category: Aggregated Business Outcome
+    chains:
+      - risk-reduction
+
+  - id: tenant-satisfaction-retention
+    name: Increased Tenant Satisfaction & Retention
+    canonical_name: "Increased Tenant Satisfaction & Retention"
+    type: ABO
+    category: Aggregated Business Outcome
+    chains:
+      - revenue-growth
+      - risk-reduction
+
+  - id: streamlined-decision-making
+    name: Streamlined Decision-Making & Workflow
+    canonical_name: "Streamlined Decision-Making & Workflow"
+    type: ABO
+    category: Aggregated Business Outcome
+    chains:
+      - productivity-workflow
+
+  # ─────────────────────────────────────────────
+  # BODM — Business Outcome-Driven Metrics (40)
+  # ─────────────────────────────────────────────
+
+  - id: irr
+    name: Internal Rate of Return (IRR)
+    canonical_name: "Internal Rate of Return (IRR)"
+    type: BODM
+    category: Financial Performance
+    chains:
+      - revenue-growth
+      - risk-reduction
+    parent_abo: optimised-portfolio-returns
+
+  - id: npv
+    name: Net Present Value (NPV)
+    canonical_name: "Net Present Value (NPV)"
+    type: BODM
+    category: Financial Performance
+    chains:
+      - revenue-growth
+    parent_abo: optimised-portfolio-returns
+
+  - id: equity-multiple
+    name: Equity Multiple
+    canonical_name: "Equity Multiple"
+    type: BODM
+    category: Financial Performance
+    chains:
+      - revenue-growth
+    parent_abo: optimised-portfolio-returns
+
+  - id: ltv
+    name: Loan-to-Value (LTV)
+    canonical_name: "Loan-to-Value (LTV)"
+    type: BODM
+    category: Financial Performance
+    chains:
+      - risk-reduction
+    parent_abo: reduced-risk-compliance
+
+  - id: debt-yield
+    name: Debt Yield
+    canonical_name: "Debt Yield"
+    type: BODM
+    category: Financial Performance
+    chains:
+      - risk-reduction
+    parent_abo: reduced-risk-compliance
+
+  - id: noi
+    name: Net Operating Income (NOI)
+    canonical_name: "Net Operating Income (NOI)"
+    type: BODM
+    category: Financial Performance
+    chains:
+      - revenue-growth
+      - cost-savings
+    parent_abo: optimised-portfolio-returns
+
+  - id: wacc
+    name: Weighted Average Cost of Capital (WACC)
+    canonical_name: "Weighted Average Cost of Capital (WACC)"
+    type: BODM
+    category: Financial Performance
+    chains:
+      - revenue-growth
+      - risk-reduction
+    parent_abo: optimised-portfolio-returns
+
+  - id: fault-detection-rate
+    name: Fault Detection Rate
+    canonical_name: "Fault Detection Rate"
+    type: BODM
+    category: Operational Efficiency
+    chains:
+      - cost-savings
+      - risk-reduction
+    parent_abo: operational-efficiency-sustainability
+
+  - id: lease-event-processing-time-reduction
+    name: Lease Event Processing Time Reduction %
+    canonical_name: "Lease Event Processing Time Reduction %"
+    type: BODM
+    category: Operational Efficiency
+    chains:
+      - productivity-workflow
+    parent_abo: streamlined-decision-making
+
+  - id: vacancy-data-accuracy
+    name: Vacancy Data Accuracy %
+    canonical_name: "Vacancy Data Accuracy %"
+    type: BODM
+    category: Operational Efficiency
+    chains:
+      - productivity-workflow
+    parent_abo: streamlined-decision-making
+
+  - id: financial-dashboard-automation
+    name: Financial Dashboard Automation %
+    canonical_name: "Financial Dashboard Automation %"
+    type: BODM
+    category: Operational Efficiency
+    chains:
+      - productivity-workflow
+    parent_abo: streamlined-decision-making
+
+  - id: asset-hierarchy-data-coverage
+    name: Asset Hierarchy Data Coverage %
+    canonical_name: "Asset Hierarchy Data Coverage %"
+    type: BODM
+    category: Operational Efficiency
+    chains:
+      - productivity-workflow
+    parent_abo: streamlined-decision-making
+
+  - id: property-data-integration-rate
+    name: Property Data Integration Rate %
+    canonical_name: "Property Data Integration Rate %"
+    type: BODM
+    category: Operational Efficiency
+    chains:
+      - productivity-workflow
+    parent_abo: streamlined-decision-making
+
+  - id: lease-data-integrity
+    name: Lease Data Integrity %
+    canonical_name: "Lease Data Integrity %"
+    type: BODM
+    category: Operational Efficiency
+    chains:
+      - productivity-workflow
+      - risk-reduction
+    parent_abo: streamlined-decision-making
+
+  - id: rent-review-automation-rate
+    name: Rent Review Automation Rate %
+    canonical_name: "Rent Review Automation Rate %"
+    type: BODM
+    category: Operational Efficiency
+    chains:
+      - productivity-workflow
+    parent_abo: streamlined-decision-making
+
+  - id: report-generation-time-reduction
+    name: Report Generation Time Reduction %
+    canonical_name: "Report Generation Time Reduction %"
+    type: BODM
+    category: Operational Efficiency
+    chains:
+      - productivity-workflow
+    parent_abo: streamlined-decision-making
+
+  - id: tenant-record-duplication-rate
+    name: Tenant Record Duplication Rate %
+    canonical_name: "Tenant Record Duplication Rate %"
+    type: BODM
+    category: Operational Efficiency
+    chains:
+      - productivity-workflow
+    parent_abo: streamlined-decision-making
+
+  - id: kwh-m2-reduction
+    name: kWh/m² Reduction
+    canonical_name: "kWh/m² Reduction"
+    type: BODM
+    category: ESG
+    chains:
+      - cost-savings
+      - esg-sustainability
+    parent_abo: operational-efficiency-sustainability
+
+  - id: peak-demand-reduction
+    name: Peak Demand Reduction
+    canonical_name: "Peak Demand Reduction"
+    type: BODM
+    category: ESG
+    chains:
+      - cost-savings
+      - esg-sustainability
+    parent_abo: operational-efficiency-sustainability
+
+  - id: carbon-emissions-reduction
+    name: Carbon Emissions Reduction
+    canonical_name: "Carbon Emissions Reduction"
+    type: BODM
+    category: ESG
+    chains:
+      - esg-sustainability
+    parent_abo: operational-efficiency-sustainability
+
+  - id: waste-reduction
+    name: Waste Reduction %
+    canonical_name: "Waste Reduction %"
+    type: BODM
+    category: ESG
+    chains:
+      - esg-sustainability
+    parent_abo: operational-efficiency-sustainability
+
+  - id: green-lease-compliance-automation
+    name: Green Lease Compliance Automation %
+    canonical_name: "Green Lease Compliance Automation %"
+    type: BODM
+    category: ESG
+    chains:
+      - esg-sustainability
+    parent_abo: operational-efficiency-sustainability
+
+  - id: climate-risk-exposure
+    name: Climate Risk Exposure
+    canonical_name: "Climate Risk Exposure"
+    type: BODM
+    category: ESG
+    chains:
+      - risk-reduction
+      - esg-sustainability
+    parent_abo: reduced-risk-compliance
+
+  - id: embodied-carbon-intensity
+    name: Embodied Carbon Intensity
+    canonical_name: "Embodied Carbon Intensity"
+    type: BODM
+    category: ESG
+    chains:
+      - esg-sustainability
+    parent_abo: operational-efficiency-sustainability
+
+  - id: construction-waste-reduction
+    name: Construction Waste Reduction %
+    canonical_name: "Construction Waste Reduction %"
+    type: BODM
+    category: ESG
+    chains:
+      - esg-sustainability
+    parent_abo: operational-efficiency-sustainability
+
+  - id: tenant-retention-rate
+    name: Tenant Retention Rate
+    canonical_name: "Tenant Retention Rate"
+    type: BODM
+    category: Tenant Outcomes
+    chains:
+      - revenue-growth
+    parent_abo: tenant-satisfaction-retention
+
+  - id: tenant-payment-reliability-index
+    name: Tenant Payment Reliability Index (TPRI)
+    canonical_name: "Tenant Payment Reliability Index (TPRI)"
+    type: BODM
+    category: Tenant Outcomes
+    chains:
+      - risk-reduction
+      - revenue-growth
+    parent_abo: tenant-satisfaction-retention
+
+  - id: average-daily-rate
+    name: Average Daily Rate (ADR)
+    canonical_name: "Average Daily Rate (ADR)"
+    type: BODM
+    category: Tenant Outcomes
+    chains:
+      - revenue-growth
+    parent_abo: optimised-portfolio-returns
+
+  - id: market-rent-vs-contract-rent
+    name: Market Rent vs Contract Rent
+    canonical_name: "Market Rent vs Contract Rent"
+    type: BODM
+    category: Tenant Outcomes
+    chains:
+      - revenue-growth
+    parent_abo: optimised-portfolio-returns
+
+  - id: tenant-utilization-rate
+    name: Tenant Utilization Rate
+    canonical_name: "Tenant Utilization Rate"
+    type: BODM
+    category: Tenant Outcomes
+    chains:
+      - productivity-workflow
+      - revenue-growth
+    parent_abo: tenant-satisfaction-retention
+
+  - id: market-absorption-rate
+    name: Market Absorption Rate
+    canonical_name: "Market Absorption Rate"
+    type: BODM
+    category: Market Performance
+    chains:
+      - revenue-growth
+    parent_abo: optimised-portfolio-returns
+
+  - id: time-to-feasibility-study
+    name: Time to Feasibility Study Completion
+    canonical_name: "Time to Feasibility Study Completion"
+    type: BODM
+    category: Development
+    chains:
+      - productivity-workflow
+      - revenue-growth
+    parent_abo: streamlined-decision-making
+
+  - id: development-density-design-index
+    name: Development Density & Design Optimisation Index
+    canonical_name: "Development Density & Design Optimisation Index"
+    type: BODM
+    category: Development
+    chains:
+      - revenue-growth
+    parent_abo: optimised-portfolio-returns
+
+  - id: planning-policy-compliance-rate
+    name: Compliance Rate with Local Planning Policy
+    canonical_name: "Compliance Rate with Local Planning Policy"
+    type: BODM
+    category: Development
+    chains:
+      - risk-reduction
+    parent_abo: reduced-risk-compliance
+
+  - id: gdv-optimisation
+    name: Gross Development Value (GDV) Optimisation
+    canonical_name: "Gross Development Value (GDV) Optimisation"
+    type: BODM
+    category: Development
+    chains:
+      - revenue-growth
+    parent_abo: optimised-portfolio-returns
+
+  - id: construction-rework-reduction
+    name: Construction Rework Reduction %
+    canonical_name: "Construction Rework Reduction %"
+    type: BODM
+    category: Construction
+    chains:
+      - cost-savings
+    parent_abo: operational-efficiency-sustainability
+
+  - id: accident-rate-reduction
+    name: Accident Rate Reduction %
+    canonical_name: "Accident Rate Reduction %"
+    type: BODM
+    category: Construction
+    chains:
+      - risk-reduction
+    parent_abo: reduced-risk-compliance
+
+  - id: architects-plans-compliance
+    name: Compliance with Architects' Plans %
+    canonical_name: "Compliance with Architects' Plans %"
+    type: BODM
+    category: Construction
+    chains:
+      - risk-reduction
+    parent_abo: reduced-risk-compliance
+
+  - id: development-pipeline-velocity
+    name: Development Pipeline Velocity
+    canonical_name: "Development Pipeline Velocity"
+    type: BODM
+    category: Development
+    chains:
+      - productivity-workflow
+      - revenue-growth
+    parent_abo: streamlined-decision-making
+
+  - id: bodm-cybersecurity-incident-rate
+    name: Cybersecurity Incident Rate
+    canonical_name: "Cybersecurity Incident Rate"
+    type: BODM
+    category: Operational Efficiency
+    chains:
+      - risk-reduction
+    parent_abo: reduced-risk-compliance
+
+  # ─────────────────────────────────────────────
+  # TODM — Technology-Outcome Driven Metrics (25)
+  # ─────────────────────────────────────────────
+
+  - id: energy-savings-pct
+    name: Energy Savings %
+    canonical_name: "Energy Savings %"
+    type: TODM
+    category: Building Systems / ESG Tech
+    chains:
+      - cost-savings
+      - esg-sustainability
+    enables_bodm:
+      - kwh-m2-reduction
+      - peak-demand-reduction
+
+  - id: data-capture-automation-rate
+    name: Data Capture Automation Rate %
+    canonical_name: "Data Capture Automation Rate %"
+    type: TODM
+    category: Data Management / Automation
+    chains:
+      - productivity-workflow
+    enables_bodm:
+      - financial-dashboard-automation
+
+  - id: system-uptime-availability
+    name: Uptime / Availability of Automated Systems
+    canonical_name: "Uptime / Availability of Automated Systems"
+    type: TODM
+    category: IT Infrastructure / Operations
+    chains:
+      - risk-reduction
+      - productivity-workflow
+    enables_bodm:
+      - fault-detection-rate
+
+  - id: ai-development-options-per-assessment
+    name: AI-Generated Development Options per Assessment
+    canonical_name: "AI-Generated Development Options per Assessment"
+    type: TODM
+    category: Development Tech / Automation
+    chains:
+      - productivity-workflow
+      - revenue-growth
+    enables_bodm:
+      - time-to-feasibility-study
+
+  - id: ai-cost-estimate-accuracy
+    name: Accuracy of AI-Generated Cost Estimates
+    canonical_name: "Accuracy of AI-Generated Cost Estimates"
+    type: TODM
+    category: Development Tech / AI
+    chains:
+      - revenue-growth
+    enables_bodm:
+      - gdv-optimisation
+
+  - id: financial-model-accuracy
+    name: Accuracy of Financial Models
+    canonical_name: "Accuracy of Financial Models"
+    type: TODM
+    category: Finance Tech / Modelling
+    chains:
+      - revenue-growth
+    enables_bodm:
+      - irr
+      - npv
+
+  - id: automated-sell-hold-frequency
+    name: Frequency of Automated Sell/Hold Recommendations
+    canonical_name: "Frequency of Automated Sell/Hold Recommendations"
+    type: TODM
+    category: Investment Analytics / Automation
+    chains:
+      - revenue-growth
+    enables_bodm:
+      - irr
+
+  - id: discrepancy-detection-rate
+    name: Discrepancy Detection Rate (Plans vs Site)
+    canonical_name: "Discrepancy Detection Rate (Plans vs Site)"
+    type: TODM
+    category: Construction / Computer Vision
+    chains:
+      - risk-reduction
+    enables_bodm:
+      - architects-plans-compliance
+
+  - id: todm-lease-data-integrity
+    name: Lease Data Integrity %
+    canonical_name: "Lease Data Integrity %"
+    type: TODM
+    category: Lease Management / Data Quality
+    chains:
+      - productivity-workflow
+      - risk-reduction
+    enables_bodm:
+      - lease-data-integrity
+
+  - id: todm-rent-review-automation-rate
+    name: Rent Review Automation Rate %
+    canonical_name: "Rent Review Automation Rate %"
+    type: TODM
+    category: Lease Management / Workflow Automation
+    chains:
+      - productivity-workflow
+    enables_bodm:
+      - rent-review-automation-rate
+
+  - id: todm-lease-event-processing-time-reduction
+    name: Lease Event Processing Time Reduction %
+    canonical_name: "Lease Event Processing Time Reduction %"
+    type: TODM
+    category: Lease Management / Efficiency
+    chains:
+      - productivity-workflow
+    enables_bodm:
+      - lease-event-processing-time-reduction
+
+  - id: todm-vacancy-data-accuracy
+    name: Vacancy Data Accuracy %
+    canonical_name: "Vacancy Data Accuracy %"
+    type: TODM
+    category: Portfolio Data / Quality
+    chains:
+      - productivity-workflow
+    enables_bodm:
+      - vacancy-data-accuracy
+
+  - id: todm-tenant-record-duplication-rate
+    name: Tenant Record Duplication Rate %
+    canonical_name: "Tenant Record Duplication Rate %"
+    type: TODM
+    category: CRM / Data Quality
+    chains:
+      - productivity-workflow
+    enables_bodm:
+      - tenant-record-duplication-rate
+
+  - id: todm-financial-dashboard-automation
+    name: Financial Dashboard Automation %
+    canonical_name: "Financial Dashboard Automation %"
+    type: TODM
+    category: Reporting / BI Automation
+    chains:
+      - productivity-workflow
+    enables_bodm:
+      - financial-dashboard-automation
+
+  - id: todm-report-generation-time-reduction
+    name: Report Generation Time Reduction %
+    canonical_name: "Report Generation Time Reduction %"
+    type: TODM
+    category: Reporting / Efficiency
+    chains:
+      - productivity-workflow
+    enables_bodm:
+      - report-generation-time-reduction
+
+  - id: todm-asset-hierarchy-data-coverage
+    name: Asset Hierarchy Data Coverage %
+    canonical_name: "Asset Hierarchy Data Coverage %"
+    type: TODM
+    category: Portfolio Data / Quality
+    chains:
+      - productivity-workflow
+    enables_bodm:
+      - asset-hierarchy-data-coverage
+
+  - id: todm-property-data-integration-rate
+    name: Property Data Integration Rate %
+    canonical_name: "Property Data Integration Rate %"
+    type: TODM
+    category: Data Management / Integration
+    chains:
+      - productivity-workflow
+    enables_bodm:
+      - property-data-integration-rate
+
+  - id: todm-green-lease-compliance-automation
+    name: Green Lease Compliance Automation %
+    canonical_name: "Green Lease Compliance Automation %"
+    type: TODM
+    category: ESG / Lease Management
+    chains:
+      - esg-sustainability
+    enables_bodm:
+      - green-lease-compliance-automation
+
+  - id: data-model-alignment-accuracy
+    name: Data Model Alignment Accuracy %
+    canonical_name: "Data Model Alignment Accuracy %"
+    type: TODM
+    category: Data Governance / Quality
+    chains:
+      - productivity-workflow
+    enables_bodm:
+      - financial-dashboard-automation
+
+  - id: todm-cybersecurity-incident-rate
+    name: Cybersecurity Incident Rate
+    canonical_name: "Cybersecurity Incident Rate"
+    type: TODM
+    category: IT Infrastructure / Operations
+    chains:
+      - risk-reduction
+    enables_bodm:
+      - bodm-cybersecurity-incident-rate
+
+  - id: iot-sensor-health-data-quality
+    name: IoT Sensor Health & Data Quality
+    canonical_name: "IoT Sensor Health & Data Quality"
+    type: TODM
+    category: Building Systems / ESG Tech
+    chains:
+      - cost-savings
+      - risk-reduction
+    enables_bodm:
+      - fault-detection-rate
+
+  - id: digital-twin-fidelity
+    name: Digital Twin Fidelity
+    canonical_name: "Digital Twin Fidelity"
+    type: TODM
+    category: Data Management / Integration
+    chains:
+      - productivity-workflow
+      - esg-sustainability
+    enables_bodm:
+      - carbon-emissions-reduction
+
+  - id: technology-adoption-rate
+    name: Technology Adoption Rate
+    canonical_name: "Technology Adoption Rate"
+    type: TODM
+    category: Organisational Capability
+    chains:
+      - productivity-workflow
+    enables_bodm:
+      - report-generation-time-reduction
+
+  - id: proptech-investment-roi
+    name: PropTech Investment ROI
+    canonical_name: "PropTech Investment ROI"
+    type: TODM
+    category: Finance Tech / Modelling
+    chains:
+      - revenue-growth
+      - cost-savings
+    enables_bodm:
+      - irr
+      - noi
+
+  - id: tenant-experience-tech-utilization
+    name: Tenant Experience Tech Utilization
+    canonical_name: "Tenant Experience Tech Utilization"
+    type: TODM
+    category: Tenant Outcomes
+    chains:
+      - revenue-growth
+    enables_bodm:
+      - tenant-retention-rate
