@@ -1,0 +1,37 @@
+front:
+  title: FACILITATION GUIDE
+  steps:
+    - "1. Share inputs — Use Case / Contract / Data artifacts on the table"
+    - "2. Orientation round — all participants read orientation cards (5 min)"
+    - "3. Pull chain subset — pre-select by colour stripe before the session"
+    - "4. Card by card: 'Does this AI move this metric?'"
+    - "5. Fill Before / After / By when on the back of each selected card"
+    - "6. Selected card stack = the business case"
+
+back:
+  hierarchy:
+    - layer: "PVL (5)"
+      description: "Why we invest"
+    - layer: "ABO (5)"
+      description: "Business result"
+    - layer: "BODM (40)"
+      description: "Measurable outcome"
+    - layer: "TODM (25)"
+      description: "Tech proof point"
+  chains:
+    - name: "Revenue Growth"
+      colour: "deep blue"
+    - name: "Cost Savings"
+      colour: "green"
+    - name: "Risk Reduction"
+      colour: "amber"
+    - name: "ESG / Sustainability"
+      colour: "teal"
+    - name: "Productivity"
+      colour: "purple"
+  pitfalls:
+    - "Group picks only TODM — ask: 'What business outcome does this produce?'"
+    - "Before AI blank — push: 'What's the current cost / rate / frequency?'"
+    - "Too many cards — cap selection at 5–7 per use case"
+    - "Contract cost unmapped — find proptech-investment-roi or wacc card"
+    - "Data gap found — note on card back as a data roadmap item"

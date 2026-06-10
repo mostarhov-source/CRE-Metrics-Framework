@@ -1,0 +1,52 @@
+cards:
+  - layer_number: 1
+    layer_name: PVL
+    layer_full_name: Primary Value Levers
+    position_indicator: "[PVL] → ABO → BODM → TODM"
+    definition: "The strategic reasons your organisation invests in AI and PropTech — the big 'why'."
+    examples:
+      - Revenue Growth
+      - Cost Savings
+      - Risk Reduction
+      - ESG / Sustainability
+      - Productivity / Workflow
+    session_guidance: "Start here when framing the AI use case — which lever does this investment pull?"
+
+  - layer_number: 2
+    layer_name: ABO
+    layer_full_name: Aggregated Business Outcomes
+    position_indicator: "PVL → [ABO] → BODM → TODM"
+    definition: "The business results your AI investment produces — what changes for the organisation."
+    examples:
+      - Optimised Portfolio Returns
+      - Tenant Satisfaction & Retention
+      - Operational Efficiency & Sustainability
+      - Streamlined Decision-Making
+      - Reduced Risk & Compliance
+    session_guidance: "Use ABO cards to anchor the business case at outcome level — these are what you report to leadership."
+
+  - layer_number: 3
+    layer_name: BODM
+    layer_full_name: Business Outcome-Driven Metrics
+    position_indicator: "PVL → ABO → [BODM] → TODM"
+    definition: "The measurable indicators that prove a business outcome is being achieved — what you track monthly or quarterly."
+    examples:
+      - Net Operating Income (NOI)
+      - Tenant Retention Rate
+      - Carbon Emissions Reduction
+      - IRR
+      - Fault Detection Rate
+    session_guidance: "BODM cards are where the business case numbers live — fill in Before / After / By when on the back."
+
+  - layer_number: 4
+    layer_name: TODM
+    layer_full_name: Technology Outcome-Driven Metrics
+    position_indicator: "PVL → ABO → BODM → [TODM]"
+    definition: "The technology-level proof points that show the AI system is working as intended — what the tech team tracks."
+    examples:
+      - PropTech Investment ROI
+      - Digital Twin Fidelity
+      - IoT Sensor Health & Data Quality
+      - Technology Adoption Rate
+      - AI Cost Estimate Accuracy
+    session_guidance: "TODM cards support the business case — they prove the AI is functioning, but they don't replace BODM as the primary evidence."
