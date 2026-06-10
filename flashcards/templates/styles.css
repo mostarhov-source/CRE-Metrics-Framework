@@ -1,0 +1,446 @@
+:root {
+    --colour-revenue-growth: #1a3a6b;
+    --colour-cost-savings: #2d7a3a;
+    --colour-risk-reduction: #b85c00;
+    --colour-esg-sustainability: #0a6b6b;
+    --colour-productivity-workflow: #5a1a8a;
+    --colour-default: #444444;
+}
+
+/* ── Card page (A6) ─────────────────────────────────── */
+
+@page card {
+    size: 105mm 148mm;
+    margin: 0;
+}
+
+.card-page {
+    page: card;
+    page-break-after: always;
+    width: 105mm;
+    height: 148mm;
+    box-sizing: border-box;
+    padding: 0 6mm 6mm 6mm;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 8pt;
+    color: #222;
+    overflow: hidden;
+    position: relative;
+}
+
+/* ── Chain stripe ────────────────────────────────────── */
+
+.chain-stripe {
+    height: 7mm;
+    width: 105mm;
+    margin: 0 -6mm 4mm -6mm;
+    flex-shrink: 0;
+}
+
+.chain-stripe.revenue-growth   { background: var(--colour-revenue-growth); }
+.chain-stripe.cost-savings     { background: var(--colour-cost-savings); }
+.chain-stripe.risk-reduction   { background: var(--colour-risk-reduction); }
+.chain-stripe.esg-sustainability { background: var(--colour-esg-sustainability); }
+.chain-stripe.productivity-workflow { background: var(--colour-productivity-workflow); }
+.chain-stripe.default          { background: var(--colour-default); }
+.chain-stripe.orientation      { background: #222222; }
+.chain-stripe.facilitator      { background: #333333; }
+
+/* ── Badges ──────────────────────────────────────────── */
+
+.badge-row {
+    display: flex;
+    gap: 2mm;
+    margin-bottom: 2mm;
+    flex-wrap: wrap;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.5mm 2mm;
+    border-radius: 1.5mm;
+    font-size: 6pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    background: #eee;
+    color: #444;
+    flex-shrink: 0;
+}
+
+.badge.pvl  { background: #dce8f5; color: var(--colour-revenue-growth); }
+.badge.abo  { background: #dff0e3; color: var(--colour-cost-savings); }
+.badge.bodm { background: #fdefd8; color: var(--colour-risk-reduction); }
+.badge.todm { background: #d8f0f0; color: var(--colour-esg-sustainability); }
+
+/* ── Metric card front ───────────────────────────────── */
+
+.metric-name {
+    font-size: 13pt;
+    font-weight: bold;
+    color: #111;
+    margin: 0 0 1.5mm 0;
+    line-height: 1.2;
+}
+
+.breadcrumb {
+    font-size: 6pt;
+    color: #888;
+    margin-bottom: 3mm;
+    line-height: 1.4;
+}
+
+.definition {
+    font-size: 8pt;
+    color: #333;
+    margin-bottom: 2mm;
+    line-height: 1.4;
+}
+
+.why-label {
+    font-size: 6pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #aaa;
+    margin-bottom: 1mm;
+}
+
+.why-text {
+    font-size: 7.5pt;
+    color: #555;
+    line-height: 1.4;
+}
+
+.classification-row {
+    display: flex;
+    gap: 2mm;
+    margin-top: auto;
+    padding-top: 2mm;
+    flex-wrap: wrap;
+}
+
+/* ── Metric card back ────────────────────────────────── */
+
+.back-section {
+    margin-bottom: 3mm;
+}
+
+.section-label {
+    font-size: 6pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #aaa;
+    margin-bottom: 1mm;
+}
+
+.formula-box {
+    background: #f5f5f5;
+    border-radius: 1.5mm;
+    padding: 2mm 3mm;
+    font-size: 7.5pt;
+    color: #333;
+    line-height: 1.4;
+}
+
+.target-text, .sources-text {
+    font-size: 7.5pt;
+    color: #444;
+    line-height: 1.4;
+}
+
+.business-case-block {
+    border: 0.75pt solid #bbb;
+    border-radius: 2mm;
+    padding: 2mm 3mm;
+    margin-top: auto;
+}
+
+.business-case-title {
+    font-size: 6.5pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 2mm;
+    letter-spacing: 0.05em;
+}
+
+.bc-field {
+    display: flex;
+    align-items: baseline;
+    border-bottom: 0.5pt solid #ddd;
+    padding: 2.5mm 0;
+    font-size: 7.5pt;
+    color: #555;
+}
+
+.bc-field:last-child {
+    border-bottom: none;
+}
+
+.bc-label {
+    flex-shrink: 0;
+    width: 22mm;
+    font-weight: bold;
+    color: #333;
+}
+
+.bc-line {
+    flex: 1;
+    border-bottom: 0.5pt solid #ccc;
+    height: 3mm;
+}
+
+/* ── Orientation card ────────────────────────────────── */
+
+.orientation-layer-number {
+    font-size: 7pt;
+    font-weight: bold;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1mm;
+}
+
+.orientation-layer-name {
+    font-size: 22pt;
+    font-weight: bold;
+    color: #111;
+    margin-bottom: 0.5mm;
+    line-height: 1;
+}
+
+.orientation-full-name {
+    font-size: 9pt;
+    color: #555;
+    margin-bottom: 3mm;
+}
+
+.orientation-position {
+    font-size: 7.5pt;
+    color: #888;
+    font-family: 'Courier New', monospace;
+    margin-bottom: 4mm;
+    letter-spacing: 0.02em;
+}
+
+.orientation-definition {
+    font-size: 8.5pt;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: auto;
+}
+
+.orientation-examples-label {
+    font-size: 6pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #aaa;
+    margin-bottom: 1.5mm;
+}
+
+.orientation-examples {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 3mm 0;
+}
+
+.orientation-examples li {
+    font-size: 7.5pt;
+    color: #444;
+    padding: 1mm 0;
+    border-bottom: 0.5pt solid #eee;
+}
+
+.orientation-guidance {
+    font-size: 7pt;
+    color: #666;
+    font-style: italic;
+    line-height: 1.4;
+    margin-top: auto;
+    padding-top: 3mm;
+    border-top: 0.5pt solid #ddd;
+}
+
+/* ── Facilitator card ────────────────────────────────── */
+
+.fac-title {
+    font-size: 9pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #333;
+    margin-bottom: 4mm;
+}
+
+.fac-steps {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+}
+
+.fac-step {
+    font-size: 8pt;
+    color: #222;
+    padding: 2.5mm 0;
+    border-bottom: 0.5pt solid #eee;
+    line-height: 1.4;
+}
+
+.fac-step:last-child {
+    border-bottom: none;
+}
+
+.fac-hierarchy {
+    margin-bottom: 4mm;
+}
+
+.fac-hier-row {
+    display: flex;
+    align-items: baseline;
+    gap: 2mm;
+    padding: 1.5mm 0;
+    border-bottom: 0.5pt solid #eee;
+    font-size: 7.5pt;
+}
+
+.fac-hier-layer {
+    font-weight: bold;
+    color: #222;
+    width: 22mm;
+    flex-shrink: 0;
+}
+
+.fac-hier-desc {
+    color: #666;
+}
+
+.fac-chains-label, .fac-pitfalls-label {
+    font-size: 6pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #aaa;
+    margin: 3mm 0 1.5mm 0;
+}
+
+.fac-chain-row {
+    display: flex;
+    align-items: center;
+    gap: 2mm;
+    font-size: 7pt;
+    color: #444;
+    margin-bottom: 1.5mm;
+}
+
+.fac-chain-swatch {
+    width: 4mm;
+    height: 4mm;
+    border-radius: 1mm;
+    flex-shrink: 0;
+}
+
+.fac-pitfall {
+    font-size: 6.5pt;
+    color: #555;
+    padding: 1.5mm 0;
+    border-bottom: 0.5pt solid #eee;
+    line-height: 1.4;
+}
+
+.fac-pitfall:last-child {
+    border-bottom: none;
+}
+
+/* ── Facilitation script (A4) ────────────────────────── */
+
+@page script {
+    size: A4;
+    margin: 20mm 22mm;
+}
+
+.script-page {
+    page: script;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 9.5pt;
+    color: #222;
+    line-height: 1.6;
+}
+
+.script-page h1 {
+    font-size: 16pt;
+    color: #111;
+    margin-bottom: 2mm;
+    border-bottom: 1.5pt solid #222;
+    padding-bottom: 3mm;
+}
+
+.script-page h2 {
+    font-size: 12pt;
+    color: #222;
+    margin-top: 8mm;
+    margin-bottom: 3mm;
+    padding-left: 3mm;
+    border-left: 3pt solid #1a3a6b;
+}
+
+.script-page h3 {
+    font-size: 10pt;
+    color: #333;
+    margin-top: 5mm;
+    margin-bottom: 2mm;
+}
+
+.script-page p {
+    margin-bottom: 3mm;
+}
+
+.script-page ul, .script-page ol {
+    padding-left: 6mm;
+    margin-bottom: 3mm;
+}
+
+.script-page li {
+    margin-bottom: 1.5mm;
+}
+
+.script-page table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 8.5pt;
+    margin-bottom: 4mm;
+}
+
+.script-page th {
+    background: #f0f0f0;
+    text-align: left;
+    padding: 2mm 3mm;
+    border: 0.5pt solid #ccc;
+    font-weight: bold;
+}
+
+.script-page td {
+    padding: 2mm 3mm;
+    border: 0.5pt solid #ccc;
+    vertical-align: top;
+}
+
+.script-page blockquote {
+    background: #f8f8f8;
+    border-left: 3pt solid #bbb;
+    margin: 3mm 0;
+    padding: 3mm 4mm;
+    font-style: italic;
+    color: #444;
+}
+
+.script-page hr {
+    border: none;
+    border-top: 0.5pt solid #ddd;
+    margin: 6mm 0;
+}
+
+.script-page strong {
+    color: #111;
+}
