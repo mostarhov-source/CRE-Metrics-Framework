@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+{# ── FRONT ─────────────────────────────────────────── #}
+<div class="card-page">
+  <div class="chain-stripe orientation"></div>
+
+  <p class="orientation-layer-number">Layer {{ card.layer_number }} of 4</p>
+  <h1 class="orientation-layer-name">{{ card.layer_name }}</h1>
+  <p class="orientation-full-name">{{ card.layer_full_name }}</p>
+  <p class="orientation-position">{{ card.position_indicator }}</p>
+  <p class="orientation-definition">{{ card.definition }}</p>
+</div>
+
+{# ── BACK ──────────────────────────────────────────── #}
+<div class="card-page">
+  <div class="chain-stripe orientation"></div>
+
+  <p class="orientation-examples-label">Examples at this layer</p>
+  <ul class="orientation-examples">
+    {% for example in card.examples %}
+    <li>{{ example }}</li>
+    {% endfor %}
+  </ul>
+
+  <p class="orientation-guidance">{{ card.session_guidance }}</p>
+</div>
+
+</body>
+</html>

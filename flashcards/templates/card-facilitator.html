@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+{# ── FRONT — Session flow ──────────────────────────── #}
+<div class="card-page">
+  <div class="chain-stripe facilitator"></div>
+
+  <p class="fac-title">{{ card.front.title }}</p>
+
+  <ul class="fac-steps">
+    {% for step in card.front.steps %}
+    <li class="fac-step">{{ step }}</li>
+    {% endfor %}
+  </ul>
+</div>
+
+{# ── BACK — Quick reference ────────────────────────── #}
+<div class="card-page">
+  <div class="chain-stripe facilitator"></div>
+
+  <div class="fac-hierarchy">
+    {% for row in card.back.hierarchy %}
+    <div class="fac-hier-row">
+      <span class="fac-hier-layer">{{ row.layer }}</span>
+      <span class="fac-hier-desc">{{ row.description }}</span>
+    </div>
+    {% endfor %}
+  </div>
+
+  <p class="fac-chains-label">Value chains</p>
+  {% for chain in card.back.chains %}
+  <div class="fac-chain-row">
+    <span class="fac-chain-swatch" style="background: var(--colour-{{ chain.name | lower | replace(' ', '-') | replace('/', '-') | replace('&', '') | replace('--', '-') }}, #666);"></span>
+    <span>{{ chain.name }}</span>
+  </div>
+  {% endfor %}
+
+  <p class="fac-pitfalls-label">Common pitfalls</p>
+  {% for pitfall in card.back.pitfalls %}
+  <p class="fac-pitfall">{{ pitfall }}</p>
+  {% endfor %}
+</div>
+
+</body>
+</html>
