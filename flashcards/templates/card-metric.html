@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+{# ── FRONT ─────────────────────────────────────────── #}
+<div class="card-page">
+  <div class="chain-stripe {{ metric.chain_class }}"></div>
+
+  <div class="badge-row">
+    <span class="badge {{ metric.type | lower }}">{{ metric.type }}</span>
+  </div>
+
+  <h1 class="metric-name">{{ metric.name }}</h1>
+
+  <p class="breadcrumb">{{ metric.breadcrumb }}</p>
+
+  <p class="definition">{{ metric.definition }}</p>
+
+  {% if metric.why_it_matters %}
+  <p class="why-label">Why it matters</p>
+  <p class="why-text">{{ metric.why_it_matters }}</p>
+  {% endif %}
+
+  <div class="classification-row">
+    <span class="badge">{{ metric.metric_type }}</span>
+    <span class="badge">{{ metric.timing }}</span>
+    <span class="badge">{{ metric.measurement_cadence }}</span>
+  </div>
+</div>
+
+{# ── BACK ──────────────────────────────────────────── #}
+<div class="card-page">
+  <div class="chain-stripe {{ metric.chain_class }}"></div>
+
+  {% if metric.formula %}
+  <div class="back-section">
+    <p class="section-label">Formula</p>
+    <div class="formula-box">{{ metric.formula }}</div>
+  </div>
+  {% endif %}
+
+  {% if metric.target %}
+  <div class="back-section">
+    <p class="section-label">Target / Benchmark</p>
+    <p class="target-text">{{ metric.target }}</p>
+  </div>
+  {% endif %}
+
+  {% if metric.data_sources %}
+  <div class="back-section">
+    <p class="section-label">Data Sources</p>
+    <p class="sources-text">{{ metric.data_sources | join(', ') }}</p>
+  </div>
+  {% endif %}
+
+  <div class="business-case-block">
+    <p class="business-case-title">Business Case</p>
+    <div class="bc-field">
+      <span class="bc-label">Before AI</span>
+      <span class="bc-line"></span>
+    </div>
+    <div class="bc-field">
+      <span class="bc-label">After AI</span>
+      <span class="bc-line"></span>
+    </div>
+    <div class="bc-field">
+      <span class="bc-label">By when</span>
+      <span class="bc-line"></span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
