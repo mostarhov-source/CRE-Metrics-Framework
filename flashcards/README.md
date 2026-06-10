@@ -2,17 +2,25 @@
 
 Physical A6 facilitation cards + A4 script. Run from inside the `flashcards/` directory.
 
+## Requirements
+
+Python 3.11+ with Homebrew (macOS). WeasyPrint requires system libraries (pango, gobject) that are only available via Homebrew Python — the macOS system Python will not work.
+
+```bash
+brew install python@3.13   # if not already installed
+```
+
 ## Setup
 
 ```bash
 cd flashcards
-pip install -r requirements.txt
+/opt/homebrew/bin/pip3.13 install -r requirements.txt
 ```
 
 ## Generate
 
 ```bash
-python generate.py
+/opt/homebrew/bin/python3.13 generate.py
 ```
 
 Outputs to `output/`:
@@ -29,5 +37,5 @@ Outputs to `output/`:
 
 ## Regenerating after metric changes
 
-Re-run `python generate.py`. All metric content is read directly from `../framework/metrics/`.
+Re-run `/opt/homebrew/bin/python3.13 generate.py`. All metric content is read directly from `../framework/metrics/`.
 Only `content/` files need manual editing (orientation cards, facilitator card, facilitation script).
