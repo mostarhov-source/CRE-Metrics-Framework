@@ -11,6 +11,12 @@ target: "≥10% typical minimum"
 data_sources:
   - NOI reports
   - ERP loan data
+metric_type: outcome
+timing: lag
+measurement_cadence: quarterly
+lead_relationship: n/a
+adoption_phase: exploit
+vanity_risk: none
 last_updated: "2026-06-07"
 ---
 

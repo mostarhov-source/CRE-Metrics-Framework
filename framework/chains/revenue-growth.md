@@ -17,34 +17,34 @@ type: chain
 
 ## Business Outcome-Driven Metrics (BODM)
 
-| Metric | Target | Formula |
-|--------|--------|---------|
-| Internal Rate of Return (IRR) | 8–12% core, >15% opportunistic | Solve for r in: NPV = Σ[Ct/(1+r)^t] = 0 |
-| Net Present Value (NPV) | NPV > 0 | Σ[Ct/(1+r)^t] – C0 |
-| Equity Multiple | 1.5–2.0x | Total Distributions ÷ Total Equity Invested |
-| Net Operating Income (NOI) | Growth 2–5% YoY | Rental Income – Operating Expenses |
-| Weighted Average Cost of Capital (WACC) | <7% core | WACC = (E/V×Re) + (D/V×Rd×(1-Tc)) |
-| Tenant Retention Rate | ≥80% | Renewed Leases ÷ Expiring Leases × 100 |
-| Tenant Payment Reliability Index (TPRI) | ≥85 | 100 – (0.4×Overdue% + 0.3×Avg DPD + 0.3×Default Rate) |
-| Average Daily Rate (ADR) | Market benchmarked | Total Revenue ÷ Total Unit-Days Sold |
-| Market Rent vs Contract Rent | 90–110% | Contract Rent ÷ Market Rent × 100 |
-| Market Absorption Rate | ≥85% within 12 months | Leased or Sold Area ÷ Total Available Area × 100 |
-| Development Density & Design Optimisation Index | ≥85/100 | Weighted score of density KPIs |
-| Gross Development Value (GDV) Optimisation | ≥5–10% uplift | GDV Optimised – GDV Baseline |
-| Time to Feasibility Study Completion | ≤30 days | Avg Days from Start to Completion |
-| Development Pipeline Velocity | 15% YoY reduction | Average days from Acquisition to Completion |
-| Tenant Utilization Rate | >75% | Actual Occupied Space ÷ Leased Space × 100 |
+| Metric | timing | cadence | Target | Formula |
+|--------|--------|---------|--------|---------|
+| Internal Rate of Return (IRR) | lag | annual | 8–12% core, >15% opportunistic | Solve for r in: NPV = Σ[Ct/(1+r)^t] = 0 |
+| Net Present Value (NPV) | lag | annual | NPV > 0 | Σ[Ct/(1+r)^t] – C0 |
+| Equity Multiple | lag | per-project | 1.5–2.0x | Total Distributions ÷ Total Equity Invested |
+| Net Operating Income (NOI) | lag | quarterly | Growth 2–5% YoY | Rental Income – Operating Expenses |
+| Weighted Average Cost of Capital (WACC) | lag | annual | <7% core | WACC = (E/V×Re) + (D/V×Rd×(1-Tc)) |
+| Tenant Retention Rate | lag | annual | ≥80% | Renewed Leases ÷ Expiring Leases × 100 |
+| Tenant Payment Reliability Index (TPRI) | lead | monthly | ≥85 | 100 – (0.4×Overdue% + 0.3×Avg DPD + 0.3×Default Rate) |
+| Average Daily Rate (ADR) | lag | monthly | Market benchmarked | Total Revenue ÷ Total Unit-Days Sold |
+| Market Rent vs Contract Rent | lag | quarterly | 90–110% | Contract Rent ÷ Market Rent × 100 |
+| Market Absorption Rate | lag | quarterly | ≥85% within 12 months | Leased or Sold Area ÷ Total Available Area × 100 |
+| Development Density & Design Optimisation Index | lead | per-project | ≥85/100 | Weighted score of density KPIs |
+| Gross Development Value (GDV) Optimisation | lag | per-project | ≥5–10% uplift | GDV Optimised – GDV Baseline |
+| Time to Feasibility Study Completion | lead | per-project | ≤30 days | Avg Days from Start to Completion |
+| Development Pipeline Velocity | lead | monthly | 15% YoY reduction | Average days from Acquisition to Completion |
+| Tenant Utilization Rate | lead | monthly | >75% | Actual Occupied Space ÷ Leased Space × 100 |
 
 ## Technology-Outcome Driven Metrics (TODM)
 
-| Metric | Target | Enables |
-|--------|--------|---------|
-| Accuracy of Financial Models | ≥95% | IRR, NPV |
-| Frequency of Automated Sell/Hold Recommendations | ≥1 per quarter per property | IRR |
-| Accuracy of AI-Generated Cost Estimates | ≥90% | Gross Development Value (GDV) Optimisation |
-| AI-Generated Development Options per Assessment | ≥5 options | Time to Feasibility Study Completion |
-| PropTech Investment ROI | ≥20% within 2 years | IRR, NOI |
-| Tenant Experience Tech Utilization | ≥70% within 6 months | Tenant Retention Rate |
+| Metric | timing | cadence | Target | Enables |
+|--------|--------|---------|--------|---------|
+| Accuracy of Financial Models | lead | per-project | ≥95% | IRR, NPV |
+| Frequency of Automated Sell/Hold Recommendations | lead | monthly | ≥1 per quarter per property | IRR |
+| Accuracy of AI-Generated Cost Estimates | lead | per-project | ≥90% | Gross Development Value (GDV) Optimisation |
+| AI-Generated Development Options per Assessment | lead | per-project | ≥5 options | Time to Feasibility Study Completion |
+| PropTech Investment ROI | lag | per-project | ≥20% within 2 years | IRR, NOI |
+| Tenant Experience Tech Utilization | lead | monthly | ≥70% within 6 months | Tenant Retention Rate |
 
 > **Note:** Several BODMs in this chain are measured through market data and traditional financial reporting rather than AI/PropTech tools: Tenant Utilization Rate, Market Rent vs Contract Rent, Market Absorption Rate, Weighted Average Cost of Capital (WACC), and Equity Multiple. These have no TODM enablers in this chain.
 

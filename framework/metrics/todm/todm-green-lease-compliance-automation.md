@@ -12,6 +12,12 @@ target: "≥80%"
 data_sources:
   - Lease DB
   - ESG reporting platform
+metric_type: output
+timing: lead
+measurement_cadence: monthly
+lead_relationship: causative
+adoption_phase: both
+vanity_risk: none
 last_updated: "2026-06-07"
 ---
 

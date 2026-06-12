@@ -11,6 +11,12 @@ target: "90–110%"
 data_sources:
   - Lease DB
   - Market comparables
+metric_type: effect
+timing: lag
+measurement_cadence: quarterly
+lead_relationship: n/a
+adoption_phase: exploit
+vanity_risk: none
 last_updated: "2026-06-07"
 ---
 

@@ -16,21 +16,21 @@ type: chain
 
 ## Business Outcome-Driven Metrics (BODM)
 
-| Metric | Target | Formula |
-|--------|--------|---------|
-| Net Operating Income (NOI) | Growth 2–5% YoY | Rental Income – Operating Expenses |
-| Fault Detection Rate | ≥90% | Faults Detected ÷ Total Faults × 100 |
-| kWh/m² Reduction | ≥10% | (Baseline – Current) ÷ Baseline × 100 |
-| Peak Demand Reduction | ≥5–10% | (Baseline Peak – Current) ÷ Baseline × 100 |
-| Construction Rework Reduction % | ≥20% | (Baseline Rework – Current) ÷ Baseline × 100 |
+| Metric | timing | cadence | Target | Formula |
+|--------|--------|---------|--------|---------|
+| Net Operating Income (NOI) | lag | quarterly | Growth 2–5% YoY | Rental Income – Operating Expenses |
+| Fault Detection Rate | lead | weekly | ≥90% | Faults Detected ÷ Total Faults × 100 |
+| kWh/m² Reduction | lead | monthly | ≥10% | (Baseline – Current) ÷ Baseline × 100 |
+| Peak Demand Reduction | lead | monthly | ≥5–10% | (Baseline Peak – Current) ÷ Baseline × 100 |
+| Construction Rework Reduction % | lead | monthly | ≥20% | (Baseline Rework – Current) ÷ Baseline × 100 |
 
 ## Technology-Outcome Driven Metrics (TODM)
 
-| Metric | Target | Enables |
-|--------|--------|---------|
-| Energy Savings % | 10–20% | kWh/m² Reduction, Peak Demand Reduction |
-| IoT Sensor Health & Data Quality | ≥98% | Fault Detection Rate |
-| PropTech Investment ROI | ≥20% within 2 years | Net Operating Income (NOI), Fault Detection Rate |
+| Metric | timing | cadence | Target | Enables |
+|--------|--------|---------|--------|---------|
+| Energy Savings % | lead | monthly | 10–20% | kWh/m² Reduction, Peak Demand Reduction |
+| IoT Sensor Health & Data Quality | lead | weekly | ≥98% | Fault Detection Rate |
+| PropTech Investment ROI | lag | per-project | ≥20% within 2 years | Net Operating Income (NOI), Fault Detection Rate |
 
 > **Note:** Construction Rework Reduction % is tracked through QA logs and site management systems rather than AI/PropTech tools. It has no TODM enabler in this chain.
 

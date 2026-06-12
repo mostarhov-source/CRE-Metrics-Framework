@@ -12,6 +12,12 @@ target: "Growth 2–5% YoY in stable portfolios"
 data_sources:
   - ERP
   - Property management systems
+metric_type: outcome
+timing: lag
+measurement_cadence: quarterly
+lead_relationship: n/a
+adoption_phase: exploit
+vanity_risk: none
 last_updated: "2026-06-07"
 ---
 

@@ -16,6 +16,12 @@ data_sources:
   - IoT meters
   - Energy bills
   - Tariff data
+metric_type: outcome
+timing: lead
+measurement_cadence: monthly
+lead_relationship: causative
+adoption_phase: both
+vanity_risk: none
 last_updated: "2026-06-07"
 ---
 

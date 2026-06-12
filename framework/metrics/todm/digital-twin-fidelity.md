@@ -14,6 +14,13 @@ data_sources:
   - BIM updates
   - IoT data feeds
   - Systems integration logs
+metric_type: output
+timing: lead
+measurement_cadence: quarterly
+lead_relationship: correlative
+adoption_phase: explore
+vanity_risk: high
+vanity_risk_note: "Completeness score is meaningless if the twin is not used for decisions. Non-vanity condition: pair with a usage metric — decisions informed by the digital twin this quarter."
 last_updated: "2026-06-07"
 ---
 

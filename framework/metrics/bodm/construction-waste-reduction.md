@@ -10,6 +10,12 @@ formula: "(Baseline Waste – Current) ÷ Baseline × 100"
 target: "≥15%"
 data_sources:
   - Waste management records
+metric_type: outcome
+timing: lag
+measurement_cadence: per-project
+lead_relationship: n/a
+adoption_phase: exploit
+vanity_risk: none
 last_updated: "2026-06-07"
 ---
 

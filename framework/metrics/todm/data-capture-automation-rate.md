@@ -14,6 +14,13 @@ data_sources:
   - IoT sensors
   - RPA logs
   - Computer vision systems
+metric_type: output
+timing: lead
+measurement_cadence: monthly
+lead_relationship: causative
+adoption_phase: both
+vanity_risk: medium
+vanity_risk_note: "High automation of low-value data is still vanity. Non-vanity condition: pair with data-model-alignment-accuracy — are the right fields being automated?"
 last_updated: "2026-06-07"
 ---
 

@@ -12,6 +12,12 @@ data_sources:
   - ERP
   - Deal models
   - Distribution statements
+metric_type: effect
+timing: lag
+measurement_cadence: per-project
+lead_relationship: n/a
+adoption_phase: exploit
+vanity_risk: none
 last_updated: "2026-06-07"
 ---
 

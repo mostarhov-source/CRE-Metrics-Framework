@@ -12,6 +12,12 @@ data_sources:
   - Cash flow models
   - ERP actuals
   - CAPEX forecasts
+metric_type: effect
+timing: lag
+measurement_cadence: annual
+lead_relationship: n/a
+adoption_phase: exploit
+vanity_risk: none
 last_updated: "2026-06-07"
 ---
 

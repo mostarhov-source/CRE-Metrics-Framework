@@ -12,6 +12,12 @@ data_sources:
   - Lease management systems
   - Brokerage reports
   - CRM databases
+metric_type: effect
+timing: lag
+measurement_cadence: quarterly
+lead_relationship: n/a
+adoption_phase: exploit
+vanity_risk: none
 last_updated: "2026-06-07"
 ---
 

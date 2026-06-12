@@ -7,6 +7,13 @@ chains:
   - productivity-workflow
 pvl:
   - productivity-workflow
+metric_type: outcome
+timing: lead
+measurement_cadence: quarterly
+lead_relationship: correlative
+adoption_phase: both
+vanity_risk: none
+last_updated: "2026-06-07"
 ---
 
 # Streamlined Decision-Making & Workflow

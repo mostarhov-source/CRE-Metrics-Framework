@@ -13,6 +13,12 @@ data_sources:
   - App usage logs
   - Tenant surveys
   - CRM data
+metric_type: output
+timing: lead
+measurement_cadence: monthly
+lead_relationship: correlative
+adoption_phase: both
+vanity_risk: none
 last_updated: "2026-06-07"
 ---
 

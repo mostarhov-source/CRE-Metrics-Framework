@@ -13,6 +13,13 @@ data_sources:
   - IT security logs
   - Incident reports
   - Audit trails
+metric_type: outcome
+timing: lag
+measurement_cadence: monthly
+lead_relationship: n/a
+adoption_phase: both
+health_metric: true
+vanity_risk: none
 last_updated: "2026-06-07"
 ---
 

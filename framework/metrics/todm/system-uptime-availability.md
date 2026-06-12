@@ -17,6 +17,13 @@ data_sources:
   - System logs
   - Monitoring dashboards
   - SLA reports
+metric_type: output
+timing: lead
+measurement_cadence: daily
+lead_relationship: causative
+adoption_phase: both
+health_metric: true
+vanity_risk: none
 last_updated: "2026-06-07"
 ---
 

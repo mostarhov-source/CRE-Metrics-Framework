@@ -13,6 +13,13 @@ data_sources:
   - ERP
   - Finance
   - Tenant CRM
+metric_type: outcome
+timing: lead
+measurement_cadence: monthly
+lead_relationship: causative
+adoption_phase: both
+health_metric: true
+vanity_risk: none
 last_updated: "2026-06-07"
 ---
 

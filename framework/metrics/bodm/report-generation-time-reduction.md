@@ -11,6 +11,12 @@ target: "≥50%"
 data_sources:
   - Reporting logs
   - Timesheets
+metric_type: process
+timing: lead
+measurement_cadence: monthly
+lead_relationship: causative
+adoption_phase: both
+vanity_risk: none
 last_updated: "2026-06-07"
 ---
 

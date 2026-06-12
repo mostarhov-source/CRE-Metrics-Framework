@@ -12,6 +12,15 @@ target: "≥80% adoption within 12 months of rollout"
 data_sources:
   - User access logs
   - Platform usage reports
+metric_type: output
+timing: lead
+measurement_cadence: monthly
+lead_relationship: correlative
+adoption_phase: both
+vanity_risk: medium
+vanity_risk_note: "Login counts do not equal value generated. Non-vanity condition: pair with proptech-investment-roi or a downstream BODM metric to confirm adoption translates to business outcomes."
+north_star_candidate: true
+north_star_context: [operations]
 last_updated: "2026-06-07"
 ---
 

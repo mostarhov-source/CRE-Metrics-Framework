@@ -11,6 +11,14 @@ target: "≥80%"
 data_sources:
   - Lease DB
   - CRM
+metric_type: outcome
+timing: lag
+measurement_cadence: annual
+lead_relationship: n/a
+adoption_phase: exploit
+north_star_candidate: true
+north_star_context: [investment]
+vanity_risk: none
 last_updated: "2026-06-07"
 ---
 

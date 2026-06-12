@@ -1,5 +1,5 @@
-version: "1.0"
-last_updated: "2026-06-07"
+version: "1.3"
+last_updated: "2026-06-09"
 description: "Canonical registry of all CRE Metrics Framework metrics. This is the only file external consumers need to reference."
 stable_url: "https://raw.githubusercontent.com/mostarhov-source/CRE-Metrics-Framework/main/framework/interfaces/machine-readable/metrics-registry.yaml"
 
@@ -16,6 +16,11 @@ metrics:
     category: Primary Value Lever
     chains:
       - cost-savings
+    metric_type: effect
+    timing: lag
+    measurement_cadence: annual
+    lead_relationship: n/a
+    adoption_phase: exploit
 
   - id: revenue-growth
     name: Revenue Growth
@@ -24,6 +29,11 @@ metrics:
     category: Primary Value Lever
     chains:
       - revenue-growth
+    metric_type: effect
+    timing: lag
+    measurement_cadence: annual
+    lead_relationship: n/a
+    adoption_phase: exploit
 
   - id: risk-reduction
     name: Risk Reduction
@@ -32,6 +42,11 @@ metrics:
     category: Primary Value Lever
     chains:
       - risk-reduction
+    metric_type: effect
+    timing: lag
+    measurement_cadence: annual
+    lead_relationship: n/a
+    adoption_phase: exploit
 
   - id: esg-sustainability
     name: ESG & Sustainability
@@ -40,6 +55,11 @@ metrics:
     category: Primary Value Lever
     chains:
       - esg-sustainability
+    metric_type: effect
+    timing: lag
+    measurement_cadence: annual
+    lead_relationship: n/a
+    adoption_phase: exploit
 
   - id: productivity-workflow
     name: Productivity & Workflow Efficiency
@@ -48,6 +68,11 @@ metrics:
     category: Primary Value Lever
     chains:
       - productivity-workflow
+    metric_type: effect
+    timing: lag
+    measurement_cadence: annual
+    lead_relationship: n/a
+    adoption_phase: exploit
 
   # ─────────────────────────────────────────────
   # ABO — Aggregated Business Outcomes (5)
@@ -60,6 +85,11 @@ metrics:
     category: Aggregated Business Outcome
     chains:
       - revenue-growth
+    metric_type: effect
+    timing: lag
+    measurement_cadence: annual
+    lead_relationship: n/a
+    adoption_phase: exploit
 
   - id: operational-efficiency-sustainability
     name: Enhanced Operational Efficiency & Sustainability
@@ -69,6 +99,11 @@ metrics:
     chains:
       - cost-savings
       - esg-sustainability
+    metric_type: outcome
+    timing: lag
+    measurement_cadence: annual
+    lead_relationship: n/a
+    adoption_phase: exploit
 
   - id: reduced-risk-compliance
     name: Reduced Investment Risk & Improved Compliance
@@ -77,6 +112,11 @@ metrics:
     category: Aggregated Business Outcome
     chains:
       - risk-reduction
+    metric_type: outcome
+    timing: lag
+    measurement_cadence: annual
+    lead_relationship: n/a
+    adoption_phase: exploit
 
   - id: tenant-satisfaction-retention
     name: Increased Tenant Satisfaction & Retention
@@ -86,6 +126,11 @@ metrics:
     chains:
       - revenue-growth
       - risk-reduction
+    metric_type: outcome
+    timing: lag
+    measurement_cadence: annual
+    lead_relationship: n/a
+    adoption_phase: exploit
 
   - id: streamlined-decision-making
     name: Streamlined Decision-Making & Workflow
@@ -94,6 +139,11 @@ metrics:
     category: Aggregated Business Outcome
     chains:
       - productivity-workflow
+    metric_type: outcome
+    timing: lead
+    measurement_cadence: quarterly
+    lead_relationship: correlative
+    adoption_phase: both
 
   # ─────────────────────────────────────────────
   # BODM — Business Outcome-Driven Metrics (40)
@@ -108,6 +158,11 @@ metrics:
       - revenue-growth
       - risk-reduction
     parent_abo: optimised-portfolio-returns
+    metric_type: effect
+    timing: lag
+    measurement_cadence: annual
+    lead_relationship: n/a
+    adoption_phase: exploit
 
   - id: npv
     name: Net Present Value (NPV)
@@ -117,6 +172,11 @@ metrics:
     chains:
       - revenue-growth
     parent_abo: optimised-portfolio-returns
+    metric_type: effect
+    timing: lag
+    measurement_cadence: annual
+    lead_relationship: n/a
+    adoption_phase: exploit
 
   - id: equity-multiple
     name: Equity Multiple
@@ -126,6 +186,11 @@ metrics:
     chains:
       - revenue-growth
     parent_abo: optimised-portfolio-returns
+    metric_type: effect
+    timing: lag
+    measurement_cadence: per-project
+    lead_relationship: n/a
+    adoption_phase: exploit
 
   - id: ltv
     name: Loan-to-Value (LTV)
@@ -135,6 +200,11 @@ metrics:
     chains:
       - risk-reduction
     parent_abo: reduced-risk-compliance
+    metric_type: outcome
+    timing: lag
+    measurement_cadence: quarterly
+    lead_relationship: n/a
+    adoption_phase: exploit
 
   - id: debt-yield
     name: Debt Yield
@@ -144,6 +214,11 @@ metrics:
     chains:
       - risk-reduction
     parent_abo: reduced-risk-compliance
+    metric_type: outcome
+    timing: lag
+    measurement_cadence: quarterly
+    lead_relationship: n/a
+    adoption_phase: exploit
 
   - id: noi
     name: Net Operating Income (NOI)
@@ -154,6 +229,11 @@ metrics:
       - revenue-growth
       - cost-savings
     parent_abo: optimised-portfolio-returns
+    metric_type: outcome
+    timing: lag
+    measurement_cadence: quarterly
+    lead_relationship: n/a
+    adoption_phase: exploit
 
   - id: wacc
     name: Weighted Average Cost of Capital (WACC)
@@ -164,6 +244,11 @@ metrics:
       - revenue-growth
       - risk-reduction
     parent_abo: optimised-portfolio-returns
+    metric_type: effect
+    timing: lag
+    measurement_cadence: annual
+    lead_relationship: n/a
+    adoption_phase: exploit
 
   - id: fault-detection-rate
     name: Fault Detection Rate
@@ -174,6 +259,11 @@ metrics:
       - cost-savings
       - risk-reduction
     parent_abo: operational-efficiency-sustainability
+    metric_type: outcome
+    timing: lead
+    measurement_cadence: weekly
+    lead_relationship: causative
+    adoption_phase: both
 
   - id: lease-event-processing-time-reduction
     name: Lease Event Processing Time Reduction %
@@ -183,6 +273,11 @@ metrics:
     chains:
       - productivity-workflow
     parent_abo: streamlined-decision-making
+    metric_type: process
+    timing: lead
+    measurement_cadence: monthly
+    lead_relationship: causative
+    adoption_phase: both
 
   - id: vacancy-data-accuracy
     name: Vacancy Data Accuracy %
@@ -192,6 +287,11 @@ metrics:
     chains:
       - productivity-workflow
     parent_abo: streamlined-decision-making
+    metric_type: output
+    timing: lead
+    measurement_cadence: monthly
+    lead_relationship: correlative
+    adoption_phase: both
 
   - id: financial-dashboard-automation
     name: Financial Dashboard Automation %
@@ -201,6 +301,11 @@ metrics:
     chains:
       - productivity-workflow
     parent_abo: streamlined-decision-making
+    metric_type: output
+    timing: lead
+    measurement_cadence: monthly
+    lead_relationship: causative
+    adoption_phase: both
 
   - id: asset-hierarchy-data-coverage
     name: Asset Hierarchy Data Coverage %
@@ -210,6 +315,11 @@ metrics:
     chains:
       - productivity-workflow
     parent_abo: streamlined-decision-making
+    metric_type: output
+    timing: lead
+    measurement_cadence: monthly
+    lead_relationship: correlative
+    adoption_phase: both
 
   - id: property-data-integration-rate
     name: Property Data Integration Rate %
@@ -219,6 +329,11 @@ metrics:
     chains:
       - productivity-workflow
     parent_abo: streamlined-decision-making
+    metric_type: output
+    timing: lead
+    measurement_cadence: monthly
+    lead_relationship: correlative
+    adoption_phase: both
 
   - id: lease-data-integrity
     name: Lease Data Integrity %
@@ -229,6 +344,11 @@ metrics:
       - productivity-workflow
       - risk-reduction
     parent_abo: streamlined-decision-making
+    metric_type: output
+    timing: lead
+    measurement_cadence: monthly
+    lead_relationship: causative
+    adoption_phase: both
 
   - id: rent-review-automation-rate
     name: Rent Review Automation Rate %
@@ -238,6 +358,11 @@ metrics:
     chains:
       - productivity-workflow
     parent_abo: streamlined-decision-making
+    metric_type: output
+    timing: lead
+    measurement_cadence: monthly
+    lead_relationship: causative
+    adoption_phase: both
 
   - id: report-generation-time-reduction
     name: Report Generation Time Reduction %
@@ -247,6 +372,11 @@ metrics:
     chains:
       - productivity-workflow
     parent_abo: streamlined-decision-making
+    metric_type: process
+    timing: lead
+    measurement_cadence: monthly
+    lead_relationship: causative
+    adoption_phase: both
 
   - id: tenant-record-duplication-rate
     name: Tenant Record Duplication Rate %
@@ -256,6 +386,11 @@ metrics:
     chains:
       - productivity-workflow
     parent_abo: streamlined-decision-making
+    metric_type: output
+    timing: lead
+    measurement_cadence: monthly
+    lead_relationship: causative
+    adoption_phase: both
 
   - id: kwh-m2-reduction
     name: kWh/m² Reduction
@@ -266,6 +401,11 @@ metrics:
       - cost-savings
       - esg-sustainability
     parent_abo: operational-efficiency-sustainability
+    metric_type: outcome
+    timing: lead
+    measurement_cadence: monthly
+    lead_relationship: causative
+    adoption_phase: both
 
   - id: peak-demand-reduction
     name: Peak Demand Reduction
@@ -276,6 +416,11 @@ metrics:
       - cost-savings
       - esg-sustainability
     parent_abo: operational-efficiency-sustainability
+    metric_type: outcome
+    timing: lead
+    measurement_cadence: monthly
+    lead_relationship: causative
+    adoption_phase: both
 
   - id: carbon-emissions-reduction
     name: Carbon Emissions Reduction
@@ -285,6 +430,13 @@ metrics:
     chains:
       - esg-sustainability
     parent_abo: operational-efficiency-sustainability
+    metric_type: outcome
+    timing: lag
+    measurement_cadence: annual
+    lead_relationship: n/a
+    adoption_phase: exploit
+    north_star_candidate: true
+    north_star_context: [esg]
 
   - id: waste-reduction
     name: Waste Reduction %
@@ -294,6 +446,11 @@ metrics:
     chains:
       - esg-sustainability
     parent_abo: operational-efficiency-sustainability
+    metric_type: outcome
+    timing: lag
+    measurement_cadence: quarterly
+    lead_relationship: n/a
+    adoption_phase: exploit
 
   - id: green-lease-compliance-automation
     name: Green Lease Compliance Automation %
@@ -303,6 +460,11 @@ metrics:
     chains:
       - esg-sustainability
     parent_abo: operational-efficiency-sustainability
+    metric_type: output
+    timing: lead
+    measurement_cadence: monthly
+    lead_relationship: correlative
+    adoption_phase: both
 
   - id: climate-risk-exposure
     name: Climate Risk Exposure
@@ -313,6 +475,11 @@ metrics:
       - risk-reduction
       - esg-sustainability
     parent_abo: reduced-risk-compliance
+    metric_type: effect
+    timing: lag
+    measurement_cadence: annual
+    lead_relationship: n/a
+    adoption_phase: exploit
 
   - id: embodied-carbon-intensity
     name: Embodied Carbon Intensity
@@ -322,6 +489,11 @@ metrics:
     chains:
       - esg-sustainability
     parent_abo: operational-efficiency-sustainability
+    metric_type: effect
+    timing: lag
+    measurement_cadence: per-project
+    lead_relationship: n/a
+    adoption_phase: exploit
 
   - id: construction-waste-reduction
     name: Construction Waste Reduction %
@@ -331,6 +503,11 @@ metrics:
     chains:
       - esg-sustainability
     parent_abo: operational-efficiency-sustainability
+    metric_type: outcome
+    timing: lag
+    measurement_cadence: per-project
+    lead_relationship: n/a
+    adoption_phase: exploit
 
   - id: tenant-retention-rate
     name: Tenant Retention Rate
@@ -340,6 +517,13 @@ metrics:
     chains:
       - revenue-growth
     parent_abo: tenant-satisfaction-retention
+    metric_type: outcome
+    timing: lag
+    measurement_cadence: annual
+    lead_relationship: n/a
+    adoption_phase: exploit
+    north_star_candidate: true
+    north_star_context: [investment]
 
   - id: tenant-payment-reliability-index
     name: Tenant Payment Reliability Index (TPRI)
@@ -350,6 +534,12 @@ metrics:
       - risk-reduction
       - revenue-growth
     parent_abo: tenant-satisfaction-retention
+    metric_type: outcome
+    timing: lead
+    measurement_cadence: monthly
+    lead_relationship: causative
+    adoption_phase: both
+    health_metric: true
 
   - id: average-daily-rate
     name: Average Daily Rate (ADR)
@@ -359,6 +549,11 @@ metrics:
     chains:
       - revenue-growth
     parent_abo: optimised-portfolio-returns
+    metric_type: outcome
+    timing: lag
+    measurement_cadence: monthly
+    lead_relationship: n/a
+    adoption_phase: exploit
 
   - id: market-rent-vs-contract-rent
     name: Market Rent vs Contract Rent
@@ -368,6 +563,11 @@ metrics:
     chains:
       - revenue-growth
     parent_abo: optimised-portfolio-returns
+    metric_type: effect
+    timing: lag
+    measurement_cadence: quarterly
+    lead_relationship: n/a
+    adoption_phase: exploit
 
   - id: tenant-utilization-rate
     name: Tenant Utilization Rate
@@ -378,6 +578,11 @@ metrics:
       - productivity-workflow
       - revenue-growth
     parent_abo: tenant-satisfaction-retention
+    metric_type: outcome
+    timing: lead
+    measurement_cadence: monthly
+    lead_relationship: correlative
+    adoption_phase: both
 
   - id: market-absorption-rate
     name: Market Absorption Rate
@@ -387,6 +592,11 @@ metrics:
     chains:
       - revenue-growth
     parent_abo: optimised-portfolio-returns
+    metric_type: effect
+    timing: lag
+    measurement_cadence: quarterly
+    lead_relationship: n/a
+    adoption_phase: exploit
 
   - id: time-to-feasibility-study
     name: Time to Feasibility Study Completion
@@ -397,6 +607,11 @@ metrics:
       - productivity-workflow
       - revenue-growth
     parent_abo: streamlined-decision-making
+    metric_type: process
+    timing: lead
+    measurement_cadence: per-project
+    lead_relationship: causative
+    adoption_phase: both
 
   - id: development-density-design-index
     name: Development Density & Design Optimisation Index
@@ -406,6 +621,11 @@ metrics:
     chains:
       - revenue-growth
     parent_abo: optimised-portfolio-returns
+    metric_type: outcome
+    timing: lead
+    measurement_cadence: per-project
+    lead_relationship: causative
+    adoption_phase: both
 
   - id: planning-policy-compliance-rate
     name: Compliance Rate with Local Planning Policy
@@ -415,6 +635,11 @@ metrics:
     chains:
       - risk-reduction
     parent_abo: reduced-risk-compliance
+    metric_type: outcome
+    timing: lead
+    measurement_cadence: per-project
+    lead_relationship: causative
+    adoption_phase: both
 
   - id: gdv-optimisation
     name: Gross Development Value (GDV) Optimisation
@@ -424,6 +649,11 @@ metrics:
     chains:
       - revenue-growth
     parent_abo: optimised-portfolio-returns
+    metric_type: effect
+    timing: lag
+    measurement_cadence: per-project
+    lead_relationship: n/a
+    adoption_phase: exploit
 
   - id: construction-rework-reduction
     name: Construction Rework Reduction %
@@ -433,6 +663,11 @@ metrics:
     chains:
       - cost-savings
     parent_abo: operational-efficiency-sustainability
+    metric_type: outcome
+    timing: lead
+    measurement_cadence: monthly
+    lead_relationship: causative
+    adoption_phase: both
 
   - id: accident-rate-reduction
     name: Accident Rate Reduction %
@@ -442,6 +677,11 @@ metrics:
     chains:
       - risk-reduction
     parent_abo: reduced-risk-compliance
+    metric_type: outcome
+    timing: lag
+    measurement_cadence: monthly
+    lead_relationship: n/a
+    adoption_phase: exploit
 
   - id: architects-plans-compliance
     name: Compliance with Architects' Plans %
@@ -451,6 +691,11 @@ metrics:
     chains:
       - risk-reduction
     parent_abo: reduced-risk-compliance
+    metric_type: output
+    timing: lead
+    measurement_cadence: monthly
+    lead_relationship: causative
+    adoption_phase: both
 
   - id: development-pipeline-velocity
     name: Development Pipeline Velocity
@@ -461,6 +706,11 @@ metrics:
       - productivity-workflow
       - revenue-growth
     parent_abo: streamlined-decision-making
+    metric_type: process
+    timing: lead
+    measurement_cadence: monthly
+    lead_relationship: causative
+    adoption_phase: both
 
   - id: bodm-cybersecurity-incident-rate
     name: Cybersecurity Incident Rate
@@ -470,6 +720,12 @@ metrics:
     chains:
       - risk-reduction
     parent_abo: reduced-risk-compliance
+    metric_type: outcome
+    timing: lag
+    measurement_cadence: monthly
+    lead_relationship: n/a
+    adoption_phase: both
+    health_metric: true
 
   # ─────────────────────────────────────────────
   # TODM — Technology-Outcome Driven Metrics (25)
@@ -486,6 +742,11 @@ metrics:
     enables_bodm:
       - kwh-m2-reduction
       - peak-demand-reduction
+    metric_type: outcome
+    timing: lead
+    measurement_cadence: monthly
+    lead_relationship: causative
+    adoption_phase: both
 
   - id: data-capture-automation-rate
     name: Data Capture Automation Rate %
@@ -496,6 +757,13 @@ metrics:
       - productivity-workflow
     enables_bodm:
       - financial-dashboard-automation
+    metric_type: output
+    timing: lead
+    measurement_cadence: monthly
+    lead_relationship: causative
+    adoption_phase: both
+    vanity_risk: medium
+    vanity_risk_note: "High automation of low-value data is still vanity. Pair with data-model-alignment-accuracy."
 
   - id: system-uptime-availability
     name: Uptime / Availability of Automated Systems
@@ -507,6 +775,12 @@ metrics:
       - productivity-workflow
     enables_bodm:
       - fault-detection-rate
+    metric_type: output
+    timing: lead
+    measurement_cadence: daily
+    lead_relationship: causative
+    adoption_phase: both
+    health_metric: true
 
   - id: ai-development-options-per-assessment
     name: AI-Generated Development Options per Assessment
@@ -518,6 +792,13 @@ metrics:
       - revenue-growth
     enables_bodm:
       - time-to-feasibility-study
+    metric_type: output
+    timing: lead
+    measurement_cadence: per-project
+    lead_relationship: correlative
+    adoption_phase: explore
+    vanity_risk: high
+    vanity_risk_note: "Counts AI options generated without measuring quality or use in decisions."
 
   - id: ai-cost-estimate-accuracy
     name: Accuracy of AI-Generated Cost Estimates
@@ -528,6 +809,11 @@ metrics:
       - revenue-growth
     enables_bodm:
       - gdv-optimisation
+    metric_type: output
+    timing: lead
+    measurement_cadence: per-project
+    lead_relationship: causative
+    adoption_phase: explore
 
   - id: financial-model-accuracy
     name: Accuracy of Financial Models
@@ -539,6 +825,11 @@ metrics:
     enables_bodm:
       - irr
       - npv
+    metric_type: output
+    timing: lead
+    measurement_cadence: per-project
+    lead_relationship: causative
+    adoption_phase: explore
 
   - id: automated-sell-hold-frequency
     name: Frequency of Automated Sell/Hold Recommendations
@@ -549,6 +840,11 @@ metrics:
       - revenue-growth
     enables_bodm:
       - irr
+    metric_type: output
+    timing: lead
+    measurement_cadence: monthly
+    lead_relationship: correlative
+    adoption_phase: both
 
   - id: discrepancy-detection-rate
     name: Discrepancy Detection Rate (Plans vs Site)
@@ -559,6 +855,11 @@ metrics:
       - risk-reduction
     enables_bodm:
       - architects-plans-compliance
+    metric_type: output
+    timing: lead
+    measurement_cadence: per-project
+    lead_relationship: causative
+    adoption_phase: explore
 
   - id: todm-lease-data-integrity
     name: Lease Data Integrity %
@@ -570,6 +871,11 @@ metrics:
       - risk-reduction
     enables_bodm:
       - lease-data-integrity
+    metric_type: output
+    timing: lead
+    measurement_cadence: monthly
+    lead_relationship: causative
+    adoption_phase: both
 
   - id: todm-rent-review-automation-rate
     name: Rent Review Automation Rate %
@@ -580,6 +886,11 @@ metrics:
       - productivity-workflow
     enables_bodm:
       - rent-review-automation-rate
+    metric_type: output
+    timing: lead
+    measurement_cadence: monthly
+    lead_relationship: causative
+    adoption_phase: both
 
   - id: todm-lease-event-processing-time-reduction
     name: Lease Event Processing Time Reduction %
@@ -590,6 +901,11 @@ metrics:
       - productivity-workflow
     enables_bodm:
       - lease-event-processing-time-reduction
+    metric_type: process
+    timing: lead
+    measurement_cadence: monthly
+    lead_relationship: causative
+    adoption_phase: both
 
   - id: todm-vacancy-data-accuracy
     name: Vacancy Data Accuracy %
@@ -600,6 +916,11 @@ metrics:
       - productivity-workflow
     enables_bodm:
       - vacancy-data-accuracy
+    metric_type: output
+    timing: lead
+    measurement_cadence: monthly
+    lead_relationship: causative
+    adoption_phase: both
 
   - id: todm-tenant-record-duplication-rate
     name: Tenant Record Duplication Rate %
@@ -610,6 +931,11 @@ metrics:
       - productivity-workflow
     enables_bodm:
       - tenant-record-duplication-rate
+    metric_type: output
+    timing: lead
+    measurement_cadence: monthly
+    lead_relationship: causative
+    adoption_phase: both
 
   - id: todm-financial-dashboard-automation
     name: Financial Dashboard Automation %
@@ -620,6 +946,11 @@ metrics:
       - productivity-workflow
     enables_bodm:
       - financial-dashboard-automation
+    metric_type: output
+    timing: lead
+    measurement_cadence: monthly
+    lead_relationship: causative
+    adoption_phase: both
 
   - id: todm-report-generation-time-reduction
     name: Report Generation Time Reduction %
@@ -630,6 +961,11 @@ metrics:
       - productivity-workflow
     enables_bodm:
       - report-generation-time-reduction
+    metric_type: process
+    timing: lead
+    measurement_cadence: monthly
+    lead_relationship: causative
+    adoption_phase: both
 
   - id: todm-asset-hierarchy-data-coverage
     name: Asset Hierarchy Data Coverage %
@@ -640,6 +976,11 @@ metrics:
       - productivity-workflow
     enables_bodm:
       - asset-hierarchy-data-coverage
+    metric_type: output
+    timing: lead
+    measurement_cadence: monthly
+    lead_relationship: causative
+    adoption_phase: both
 
   - id: todm-property-data-integration-rate
     name: Property Data Integration Rate %
@@ -650,6 +991,11 @@ metrics:
       - productivity-workflow
     enables_bodm:
       - property-data-integration-rate
+    metric_type: output
+    timing: lead
+    measurement_cadence: monthly
+    lead_relationship: causative
+    adoption_phase: both
 
   - id: todm-green-lease-compliance-automation
     name: Green Lease Compliance Automation %
@@ -660,6 +1006,11 @@ metrics:
       - esg-sustainability
     enables_bodm:
       - green-lease-compliance-automation
+    metric_type: output
+    timing: lead
+    measurement_cadence: monthly
+    lead_relationship: causative
+    adoption_phase: both
 
   - id: data-model-alignment-accuracy
     name: Data Model Alignment Accuracy %
@@ -670,6 +1021,11 @@ metrics:
       - productivity-workflow
     enables_bodm:
       - financial-dashboard-automation
+    metric_type: output
+    timing: lead
+    measurement_cadence: monthly
+    lead_relationship: causative
+    adoption_phase: explore
 
   - id: todm-cybersecurity-incident-rate
     name: Cybersecurity Incident Rate
@@ -680,6 +1036,12 @@ metrics:
       - risk-reduction
     enables_bodm:
       - bodm-cybersecurity-incident-rate
+    metric_type: outcome
+    timing: lag
+    measurement_cadence: monthly
+    lead_relationship: n/a
+    adoption_phase: both
+    health_metric: true
 
   - id: iot-sensor-health-data-quality
     name: IoT Sensor Health & Data Quality
@@ -691,6 +1053,12 @@ metrics:
       - risk-reduction
     enables_bodm:
       - fault-detection-rate
+    metric_type: output
+    timing: lead
+    measurement_cadence: weekly
+    lead_relationship: causative
+    adoption_phase: both
+    health_metric: true
 
   - id: digital-twin-fidelity
     name: Digital Twin Fidelity
@@ -702,6 +1070,13 @@ metrics:
       - esg-sustainability
     enables_bodm:
       - carbon-emissions-reduction
+    metric_type: output
+    timing: lead
+    measurement_cadence: quarterly
+    lead_relationship: correlative
+    adoption_phase: explore
+    vanity_risk: high
+    vanity_risk_note: "Completeness score is meaningless if the twin is not used for decisions."
 
   - id: technology-adoption-rate
     name: Technology Adoption Rate
@@ -712,6 +1087,15 @@ metrics:
       - productivity-workflow
     enables_bodm:
       - report-generation-time-reduction
+    metric_type: output
+    timing: lead
+    measurement_cadence: monthly
+    lead_relationship: correlative
+    adoption_phase: both
+    vanity_risk: medium
+    vanity_risk_note: "Login counts do not equal value generated. Pair with proptech-investment-roi."
+    north_star_candidate: true
+    north_star_context: [operations]
 
   - id: proptech-investment-roi
     name: PropTech Investment ROI
@@ -724,6 +1108,11 @@ metrics:
     enables_bodm:
       - irr
       - noi
+    metric_type: effect
+    timing: lag
+    measurement_cadence: per-project
+    lead_relationship: n/a
+    adoption_phase: exploit
 
   - id: tenant-experience-tech-utilization
     name: Tenant Experience Tech Utilization
@@ -734,3 +1123,8 @@ metrics:
       - revenue-growth
     enables_bodm:
       - tenant-retention-rate
+    metric_type: output
+    timing: lead
+    measurement_cadence: monthly
+    lead_relationship: correlative
+    adoption_phase: both

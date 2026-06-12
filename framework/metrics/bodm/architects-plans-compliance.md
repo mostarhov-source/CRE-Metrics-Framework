@@ -11,6 +11,12 @@ target: "≥95%"
 data_sources:
   - Site inspections
   - Digital twins
+metric_type: output
+timing: lead
+measurement_cadence: monthly
+lead_relationship: causative
+adoption_phase: both
+vanity_risk: none
 last_updated: "2026-06-07"
 ---
 

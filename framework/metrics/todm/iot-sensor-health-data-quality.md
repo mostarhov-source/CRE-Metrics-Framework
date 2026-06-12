@@ -13,6 +13,13 @@ target: "≥98% sensor uptime and data validity"
 data_sources:
   - Sensor telemetry logs
   - Monitoring dashboards
+metric_type: output
+timing: lead
+measurement_cadence: weekly
+lead_relationship: causative
+adoption_phase: both
+health_metric: true
+vanity_risk: none
 last_updated: "2026-06-07"
 ---
 

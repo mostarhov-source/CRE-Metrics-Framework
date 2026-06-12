@@ -12,6 +12,12 @@ target: "≥90%"
 data_sources:
   - BMS telemetry
   - Maintenance logs
+metric_type: outcome
+timing: lead
+measurement_cadence: weekly
+lead_relationship: causative
+adoption_phase: both
+vanity_risk: none
 last_updated: "2026-06-07"
 ---
 

@@ -14,6 +14,12 @@ data_sources:
   - ERP
   - BI dashboards
   - Market comparables
+metric_type: output
+timing: lead
+measurement_cadence: per-project
+lead_relationship: causative
+adoption_phase: explore
+vanity_risk: none
 last_updated: "2026-06-07"
 ---
 

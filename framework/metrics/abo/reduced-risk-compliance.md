@@ -7,6 +7,13 @@ chains:
   - risk-reduction
 pvl:
   - risk-reduction
+metric_type: outcome
+timing: lag
+measurement_cadence: annual
+lead_relationship: n/a
+adoption_phase: exploit
+vanity_risk: none
+last_updated: "2026-06-07"
 ---
 
 # Reduced Investment Risk & Improved Compliance

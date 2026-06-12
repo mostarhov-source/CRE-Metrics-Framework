@@ -11,6 +11,12 @@ target: "≤60% (core), ≤70% (value-add)"
 data_sources:
   - Valuation reports
   - ERP loan schedules
+metric_type: outcome
+timing: lag
+measurement_cadence: quarterly
+lead_relationship: n/a
+adoption_phase: exploit
+vanity_risk: none
 last_updated: "2026-06-07"
 ---
 

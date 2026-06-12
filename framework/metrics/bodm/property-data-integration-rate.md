@@ -11,6 +11,12 @@ target: "≥90%"
 data_sources:
   - Integration logs
   - Data warehouse
+metric_type: output
+timing: lead
+measurement_cadence: monthly
+lead_relationship: correlative
+adoption_phase: both
+vanity_risk: none
 last_updated: "2026-06-07"
 ---
 

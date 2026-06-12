@@ -11,6 +11,12 @@ target: "≥25% over 5 years"
 data_sources:
   - Waste transfer notes
   - Facility logs
+metric_type: outcome
+timing: lag
+measurement_cadence: quarterly
+lead_relationship: n/a
+adoption_phase: exploit
+vanity_risk: none
 last_updated: "2026-06-07"
 ---
 

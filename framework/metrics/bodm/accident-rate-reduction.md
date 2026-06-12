@@ -10,6 +10,12 @@ formula: "(Baseline Accidents – Current) ÷ Baseline × 100"
 target: "≥25%"
 data_sources:
   - Safety incident logs
+metric_type: outcome
+timing: lag
+measurement_cadence: monthly
+lead_relationship: n/a
+adoption_phase: exploit
+vanity_risk: none
 last_updated: "2026-06-07"
 ---
 

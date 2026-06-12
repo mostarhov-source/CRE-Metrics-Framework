@@ -16,29 +16,29 @@ type: chain
 
 ## Business Outcome-Driven Metrics (BODM)
 
-| Metric | Target | Formula |
-|--------|--------|---------|
-| Internal Rate of Return (IRR) | 8–12% core | Solve for r in: NPV = Σ[Ct/(1+r)^t] = 0 |
-| Loan-to-Value (LTV) | ≤60% core, ≤70% value-add | Loan Balance ÷ Property Value |
-| Debt Yield | ≥10% | NOI ÷ Loan Amount |
-| Fault Detection Rate | ≥90% | Faults Detected ÷ Total Faults × 100 |
-| Lease Data Integrity % | ≥95% | Validated Lease Records ÷ Total Lease Records × 100 |
-| Tenant Payment Reliability Index (TPRI) | ≥85 | 100 – (0.4×Overdue% + 0.3×Avg DPD + 0.3×Default Rate) |
-| Compliance Rate with Local Planning Policy | ≥95% | Compliant Options ÷ Total Options × 100 |
-| Climate Risk Exposure | <10% portfolio in high-risk | Weighted risk scores by asset value |
-| Accident Rate Reduction % | ≥25% | (Baseline Accidents – Current) ÷ Baseline × 100 |
-| Compliance with Architects' Plans % | ≥95% | Compliant Works ÷ Total Works × 100 |
-| Cybersecurity Incident Rate | <1 per 100 systems/year | Incidents ÷ Systems × 100 |
+| Metric | timing | cadence | Target | Formula |
+|--------|--------|---------|--------|---------|
+| Internal Rate of Return (IRR) | lag | annual | 8–12% core | Solve for r in: NPV = Σ[Ct/(1+r)^t] = 0 |
+| Loan-to-Value (LTV) | lag | quarterly | ≤60% core, ≤70% value-add | Loan Balance ÷ Property Value |
+| Debt Yield | lag | quarterly | ≥10% | NOI ÷ Loan Amount |
+| Fault Detection Rate | lead | weekly | ≥90% | Faults Detected ÷ Total Faults × 100 |
+| Lease Data Integrity % | lead | monthly | ≥95% | Validated Lease Records ÷ Total Lease Records × 100 |
+| Tenant Payment Reliability Index (TPRI) | lead | monthly | ≥85 | 100 – (0.4×Overdue% + 0.3×Avg DPD + 0.3×Default Rate) |
+| Compliance Rate with Local Planning Policy | lead | per-project | ≥95% | Compliant Options ÷ Total Options × 100 |
+| Climate Risk Exposure | lag | annual | <10% portfolio in high-risk | Weighted risk scores by asset value |
+| Accident Rate Reduction % | lag | monthly | ≥25% | (Baseline Accidents – Current) ÷ Baseline × 100 |
+| Compliance with Architects' Plans % | lead | monthly | ≥95% | Compliant Works ÷ Total Works × 100 |
+| Cybersecurity Incident Rate | lag | monthly | <1 per 100 systems/year | Incidents ÷ Systems × 100 |
 
 ## Technology-Outcome Driven Metrics (TODM)
 
-| Metric | Target | Enables |
-|--------|--------|---------|
-| Uptime / Availability of Automated Systems | ≥99.5% | Fault Detection Rate |
-| Discrepancy Detection Rate (Plans vs Site) | ≥90% | Compliance with Architects' Plans % |
-| Lease Data Integrity % | ≥95% | Lease Data Integrity % (BODM) |
-| IoT Sensor Health & Data Quality | ≥98% | Fault Detection Rate |
-| Cybersecurity Incident Rate | <1 per 100 systems/year | Cybersecurity Incident Rate (BODM) |
+| Metric | timing | cadence | Target | Enables |
+|--------|--------|---------|--------|---------|
+| Uptime / Availability of Automated Systems | lead | daily | ≥99.5% | Fault Detection Rate |
+| Discrepancy Detection Rate (Plans vs Site) | lead | per-project | ≥90% | Compliance with Architects' Plans % |
+| Lease Data Integrity % | lead | monthly | ≥95% | Lease Data Integrity % (BODM) |
+| IoT Sensor Health & Data Quality | lead | weekly | ≥98% | Fault Detection Rate |
+| Cybersecurity Incident Rate | lag | monthly | <1 per 100 systems/year | Cybersecurity Incident Rate (BODM) |
 
 > **Note:** Several BODMs in this chain are tracked through traditional financial and operational processes rather than AI/PropTech tools: IRR, Loan-to-Value (LTV), Debt Yield, Tenant Payment Reliability Index (TPRI), Climate Risk Exposure, Accident Rate Reduction %, and Compliance Rate with Local Planning Policy. These have no TODM enablers in this chain.
 

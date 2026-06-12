@@ -13,6 +13,13 @@ target: "≥5 compliant options per appraisal"
 data_sources:
   - AI planning tools
   - System logs
+metric_type: output
+timing: lead
+measurement_cadence: per-project
+lead_relationship: correlative
+adoption_phase: explore
+vanity_risk: high
+vanity_risk_note: "Counts AI options generated without measuring quality or use in decisions. Non-vanity condition: restrict to compliant options per appraisal and require that options were used in a planning decision."
 last_updated: "2026-06-07"
 ---
 
